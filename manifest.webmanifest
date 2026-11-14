@@ -1,0 +1,18 @@
+{
+  "name": "スタレ育成ノート",
+  "short_name": "育成ノート",
+  "description": "崩壊：スターレイルの編成ごとの育成方針と目標ステータス",
+  "lang": "ja",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f1524",
+  "theme_color": "#0f1524",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

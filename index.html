@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#eef1f6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1524" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="育成ノート">
+  <meta name="robots" content="noindex">
+  <title>スタレ育成ノート</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div class="top-row">
+        <h1>スタレ育成ノート</h1>
+        <span class="updated" id="updated">読み込み中…</span>
+      </div>
+      <nav class="tabs" id="tabs" role="tablist" aria-label="編成"></nav>
+    </header>
+    <main id="view">
+      <div class="state" id="state">育成データを読み込んでいます。</div>
+    </main>
+    <p class="legend">数値はステータス画面の値。目標はアサギゲームズの「厳選の目安」を採用し、Game8は参考として併記しています。やることのチェックはこの端末にだけ保存されます。</p>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
