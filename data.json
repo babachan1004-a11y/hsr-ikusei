@@ -109,6 +109,32 @@
      "policy": "速度200が大きな節目。次にHP。回復が間に合わない原因の第一候補。"
     }
    ]
+  },
+  {
+   "name": "キャストリス",
+   "note": "アサギゲームズが比較に使っている編成（長夜月・キュレネ・ヒアンシー）。キャストリスは詩人セットのため速度を95未満に保つ。",
+   "members": [
+    {
+     "char": "キャストリス",
+     "role": "主力",
+     "policy": "会心率を画面68%まで上げるのが最優先。速度は今95ちょうどの表示なので、ゲーム内で95未満かを確認する。"
+    },
+    {
+     "char": "長夜月",
+     "role": "サブ火力・バフ",
+     "policy": "会心率は画面65%で足りる。残りは会心ダメとHP。"
+    },
+    {
+     "char": "キュレネ",
+     "role": "サポート",
+     "policy": "速度180が最優先。届いたらHP。"
+    },
+    {
+     "char": "ヒアンシー",
+     "role": "耐久",
+     "policy": "愉悦・黄泉編成と兼用。"
+    }
+   ]
   }
  ],
  "chars": [
@@ -118,7 +144,8 @@
    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/b5490082dd82024dc2194a8982f5e8e9.png",
    "cone": {
     "now": "報われぬ戴冠",
-    "rec": "モチーフが第一候補"
+    "rec": "モチーフが第一候補",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/b18a1bdea9a3f61ca5c7c5939f3cffe5.png"
    },
    "set": {
     "now": "学者4＋生命科学研究院",
@@ -154,6 +181,38 @@
      "now": 166.3,
      "unit": "%"
     }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/48456fd8f9c934d62db0cceef69480f7.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/949b20e01dad924a80bdbca4e3025eea.png"
+    },
+    {
+     "slot": "胴",
+     "main": "会心率",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/c83d65f2e024b0e3ca86312863cd1850.png"
+    },
+    {
+     "slot": "脚",
+     "main": "速度",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/85abfa2ec7bf8e9090c42fca9a6b3187.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "風属性",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/60ef1500f4d7943263ea034a16d55d38.png"
+    },
+    {
+     "slot": "縄",
+     "main": "攻撃%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/7b6f85b22808c1574b184f809de3e193.png"
+    }
    ]
   },
   {
@@ -162,7 +221,8 @@
    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/478d0c98d516a5351ecd77fe47a4f143.png",
    "cone": {
     "now": "在るがままの我 Lv80 重畳1",
-    "note": "推奨のスライドは未取得"
+    "note": "推奨のスライドは未取得",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/77ffb88b99b5a879e7542468699e6a80.png"
    },
    "set": {
     "now": "学者4＋生命科学研究院",
@@ -197,6 +257,38 @@
      "now": 3758,
      "unit": ""
     }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/48456fd8f9c934d62db0cceef69480f7.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/949b20e01dad924a80bdbca4e3025eea.png"
+    },
+    {
+     "slot": "胴",
+     "main": "会心率",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/c83d65f2e024b0e3ca86312863cd1850.png"
+    },
+    {
+     "slot": "脚",
+     "main": "攻撃%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/85abfa2ec7bf8e9090c42fca9a6b3187.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "雷属性",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/60ef1500f4d7943263ea034a16d55d38.png"
+    },
+    {
+     "slot": "縄",
+     "main": "攻撃%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/7b6f85b22808c1574b184f809de3e193.png"
+    }
    ]
   },
   {
@@ -206,7 +298,8 @@
    "cone": {
     "now": "空の虹が消えぬように Lv80 重畳1",
     "rec": "モチーフが第一候補",
-    "note": "今の光円錐がモチーフかどうかは未確認"
+    "note": "今の光円錐がモチーフかどうかは未確認",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/842029ecc5789f7cb4225593d5c72194.png"
    },
    "set": {
     "now": "救世主4＋オンパロス",
@@ -249,6 +342,38 @@
      "now": 179,
      "unit": ""
     }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/28204a09da3ff488f8acfe36d3c7d976.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/e8bb74afc8d6e7f977b94839a59b06d1.png"
+    },
+    {
+     "slot": "胴",
+     "main": "HP%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/c8af7fa9a094546929f2e9e23d471a79.png"
+    },
+    {
+     "slot": "脚",
+     "main": "速度",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/59bb71b5ccd5b2dc67dc0c39182c292f.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "HP%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/cb3a6508b96044481fc4a9721f3b6310.png"
+    },
+    {
+     "slot": "縄",
+     "main": "EP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/a236112d3de1e400b58ea2401e000849.png"
+    }
    ]
   },
   {
@@ -257,7 +382,8 @@
    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/1c8a30abb7eb57db444267f6ad67f8ae.png",
    "cone": {
     "now": "驚魂の夜 Lv80 重畳1",
-    "rec": "フォフォモチーフか羅刹モチーフ。星4は手術後の会話"
+    "rec": "フォフォモチーフか羅刹モチーフ。星4は手術後の会話",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/48ae83f36358f164ed55ad0e94e0d080.png"
    },
    "set": {
     "now": "武神4＋ピノコニー",
@@ -293,6 +419,38 @@
      "now": 160,
      "unit": ""
     }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ec179d93a1d677c98f4eb40d855fae18.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/29340363bd9b50b0036c6553fb01350f.png"
+    },
+    {
+     "slot": "胴",
+     "main": "HP%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/a23634f16df32de35798f83f8028cf85.png"
+    },
+    {
+     "slot": "脚",
+     "main": "速度",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/e9b6cbbd0560fb4bc6d5cc51afe2ba3c.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "HP%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/9fdab3eec2b8c16967533b7db7587c8f.png"
+    },
+    {
+     "slot": "縄",
+     "main": "EP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/a980bf2dcbd6fd0d58b81f1b394be764.png"
+    }
    ]
   },
   {
@@ -301,7 +459,8 @@
    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/c071bbe4c455985e206fa702b6a56723.png",
    "cone": {
     "now": "流れ逝く岸を歩いて Lv80 重畳1",
-    "rec": "モチーフが無難（以前より価値は下がった）。代用は風に揺蕩う虚言、終わりなき舞踏"
+    "rec": "モチーフが無難（以前より価値は下がった）。代用は風に揺蕩う虚言、終わりなき舞踏",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/d8174bc61c339e3283d6d313144cc2cf.png"
    },
    "set": {
     "now": "鷹4＋出雲",
@@ -348,6 +507,38 @@
      "unit": "",
      "memo": "速度靴なら144が目安"
     }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/36226d3d518637440e915cd785f20713.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/0e64b56d731b68050083c80ad8714f96.png"
+    },
+    {
+     "slot": "胴",
+     "main": "会心率",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/6a2acce07d3d96d00ca3d5fe19ab2c67.png"
+    },
+    {
+     "slot": "脚",
+     "main": "攻撃%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/c62c73a29179ba18391048468371ada2.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "攻撃%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/20168069c25fb781358a49f58259fd78.png"
+    },
+    {
+     "slot": "縄",
+     "main": "攻撃%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/26129cbfc2bd803df18bbe1ce490731b.png"
+    }
    ]
   },
   {
@@ -356,7 +547,8 @@
    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/84905d87444d6ff4eb55e03b61817f24.png",
    "cone": {
     "now": "決意は汗のように輝く Lv70 重畳1",
-    "note": "使うならLv80に上げる"
+    "note": "使うならLv80に上げる",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/d8c13347cdc408a277f9a9e30e795675.png"
    },
    "set": {
     "now": "司祭2＋メッセンジャー2＋伊須磨州"
@@ -368,7 +560,39 @@
     "label": "アサギゲームズの目標は未調査",
     "trust": "—"
    },
-   "targets": []
+   "targets": [],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ac45b923319873eb55d41f1b27398266.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/fb9897540df0fbdbf0d66d18e1111a22.png"
+    },
+    {
+     "slot": "胴",
+     "main": "命中",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/69ae2035062896bfae6112145b8c3c63.png"
+    },
+    {
+     "slot": "脚",
+     "main": "速度",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/f28c071119d4d13ae3a293cb9d66e016.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "防御%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/8a33fc49fb9768957dca9a24dcf7a5d4.png"
+    },
+    {
+     "slot": "縄",
+     "main": "EP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/d18a82b4ca9934ea61e30df3b032bcfc.png"
+    }
+   ]
   },
   {
    "name": "椒丘",
@@ -376,7 +600,8 @@
    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/11e31ad95913f66c799a8dbed6f93c3f.png",
    "cone": {
     "now": "獲物の視線 Lv60 重畳5",
-    "note": "使うならLv80に上げる"
+    "note": "使うならLv80に上げる",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ef981e9645fe04b16af47922198ed36d.png"
    },
    "set": {
     "now": "先駆者2＋司祭＋メッセンジャー＋カンパニー"
@@ -388,7 +613,39 @@
     "label": "アサギゲームズの目標は未調査",
     "trust": "—"
    },
-   "targets": []
+   "targets": [],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/0499e722765d344350914c8ee8db4682.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/bdbe9316bbe4a95939e2c13b2c02a570.png"
+    },
+    {
+     "slot": "胴",
+     "main": "命中",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/e495d639fb6e04726b53bc1f82708a6f.png"
+    },
+    {
+     "slot": "脚",
+     "main": "速度",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/e3e8362027d857e1c9d578f7f02990e0.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "炎属性",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/4a8fbe845d62eb54eea6598bfb546824.png"
+    },
+    {
+     "slot": "縄",
+     "main": "EP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/27fede96c9ef00b148276b80431eea96.png"
+    }
+   ]
   },
   {
    "name": "アーチャー",
@@ -396,7 +653,8 @@
    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/bbccf29264c7f97d1e9af0bc5d92856a.png",
    "cone": {
     "now": "理想を焼く奈落で Lv80 重畳1",
-    "rec": "モチーフ"
+    "rec": "モチーフ",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/fec1e1357ae243d7fa93fcd4ecd2742b.png"
    },
    "set": {
     "now": "天才4＋タイキヤン",
@@ -436,6 +694,38 @@
      "unit": "",
      "g8": "3000以上"
     }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/60ff3a5238bed1652b1ed7e689040871.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/31d53ec6976bb3ed84078e9cc57e5ae7.png"
+    },
+    {
+     "slot": "胴",
+     "main": "会心率",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/82757931f032bb9f34ef125845ecabfd.png"
+    },
+    {
+     "slot": "脚",
+     "main": "攻撃%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/9e17f47f6ce244291534b44713e295d2.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "量子属性",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/f9b82a568c19ea13c409d7cb7a1524a2.png"
+    },
+    {
+     "slot": "縄",
+     "main": "攻撃%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/481f3f676f94e196c61d21d3ada0ad09.png"
+    }
    ]
   },
   {
@@ -444,7 +734,8 @@
    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/0c3224d494919f77d09f167142eaff49.png",
    "cone": {
     "now": "静かに瞬く小さな火 Lv80 重畳1",
-    "rec": "モチーフ"
+    "rec": "モチーフ",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/3229200b1e9f12130f7e57105d61fbf4.png"
    },
    "set": {
     "now": "天才4＋タイキヤン",
@@ -490,6 +781,38 @@
      "unit": "",
      "g8": "2000以上"
     }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/60ff3a5238bed1652b1ed7e689040871.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/31d53ec6976bb3ed84078e9cc57e5ae7.png"
+    },
+    {
+     "slot": "胴",
+     "main": "会心率",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/82757931f032bb9f34ef125845ecabfd.png"
+    },
+    {
+     "slot": "脚",
+     "main": "速度",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/9e17f47f6ce244291534b44713e295d2.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "量子属性",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/f9b82a568c19ea13c409d7cb7a1524a2.png"
+    },
+    {
+     "slot": "縄",
+     "main": "EP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/481f3f676f94e196c61d21d3ada0ad09.png"
+    }
    ]
   },
   {
@@ -499,7 +822,8 @@
    "cone": {
     "now": "ダンス！ダンス！ダンス！ Lv70 重畳5",
     "rec": "ダンスのままでよい",
-    "note": "Lv80に上げる"
+    "note": "Lv80に上げる",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/63d3022d3295bba7b7bd771954c33590.png"
    },
    "set": {
     "now": "司祭4＋ルサカ",
@@ -529,6 +853,38 @@
      "now": 154,
      "unit": ""
     }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ac45b923319873eb55d41f1b27398266.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/bdbe9316bbe4a95939e2c13b2c02a570.png"
+    },
+    {
+     "slot": "胴",
+     "main": "会心ダメ",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/69ae2035062896bfae6112145b8c3c63.png"
+    },
+    {
+     "slot": "脚",
+     "main": "速度",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/3efea777e616e64f7b4a1c26016088c8.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "防御%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/90bf9d871aeaeb1de8e6ea1834335f30.png"
+    },
+    {
+     "slot": "縄",
+     "main": "EP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/36b71aff3544dde84b6bca109d0c2fce.png"
+    }
    ]
   },
   {
@@ -536,7 +892,8 @@
    "element": "physical",
    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/2c9600b365645aa69b58d991fb3e31e4.png",
    "cone": {
-    "now": "旅が平穏であるように Lv80 重畳1"
+    "now": "旅が平穏であるように Lv80 重畳1",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ec45e8ab1131f520884085db973d8815.png"
    },
    "set": {
     "now": "隠者4＋ルサカ"
@@ -565,6 +922,38 @@
      "now": 143,
      "unit": ""
     }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/e4dabdaa39abd89f86fcd5a8760cf41c.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/a23f64d3590efc7bbb925130f701bdbe.png"
+    },
+    {
+     "slot": "胴",
+     "main": "攻撃%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/8e86ab5653ead82df6599f6f0db04a43.png"
+    },
+    {
+     "slot": "脚",
+     "main": "速度",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/7849c99316ad3d1de6147cacdb54e222.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "攻撃%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/90bf9d871aeaeb1de8e6ea1834335f30.png"
+    },
+    {
+     "slot": "縄",
+     "main": "EP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/36b71aff3544dde84b6bca109d0c2fce.png"
+    }
    ]
   },
   {
@@ -574,7 +963,8 @@
    "cone": {
     "now": "今日は好運 Lv80 重畳5",
     "rec": "モチーフが頭一つ抜ける。星4は「今日は好運」「タケタケ冒険記」「バカンスのひととき」がほぼ横並びで、持っているものでよい",
-    "note": "アサギ評価：星4の最上位グループなので今のままでよい。会心率+20%（重畳5）が付くので、会心率があふれないようサブで調整。Game8は「みんなで一緒に未来へ」を上に置き、今日は好運は会心率が足りないとき用としている"
+    "note": "アサギ評価：星4の最上位グループなので今のままでよい。会心率+20%（重畳5）が付くので、会心率があふれないようサブで調整。Game8は「みんなで一緒に未来へ」を上に置き、今日は好運は会心率が足りないとき用としている",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/6d380dbada12607ee06330f627399111.png"
    },
    "set": {
     "now": "魔法少女4＋パンクロード",
@@ -607,6 +997,38 @@
      "unit": "%",
      "g8": "200%以上"
     }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/a1c3d89dfa29f0e3c90eb675b96535fc.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/60963338a921e42e5862d56eb8d7be26.png"
+    },
+    {
+     "slot": "胴",
+     "main": "会心ダメ",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/d0834248425423f2a5e021370df8f73a.png"
+    },
+    {
+     "slot": "脚",
+     "main": "攻撃%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/737e0e7c4623d6b5a3ada5698be8aa0f.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "物理属性",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/7d7389ce77e78ab74724795710a443bb.png"
+    },
+    {
+     "slot": "縄",
+     "main": "EP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/2a4fc99ac782256e6d5b6d1e503dfab0.png"
+    }
    ]
   },
   {
@@ -615,7 +1037,8 @@
    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/9992dd2ff280e580fe05729d34279568.png",
    "cone": {
     "now": "はじめの「アッハ」が響く時 Lv80 重畳1",
-    "rec": "モチーフ。代用は再び花が咲く季節に、タケタケ冒険記"
+    "rec": "モチーフ。代用は再び花が咲く季節に、タケタケ冒険記",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/51fdfae17038d54f46df6b6b15c4aa9c.png"
    },
    "set": {
     "now": "伶人4＋刹那の愉悦",
@@ -646,6 +1069,38 @@
      "now": 81.8,
      "unit": "%"
     }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/4ed01db337eda45504f305f3d462ac19.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/c54a8aa37d8d0fa4d8c3e96a1ab644f6.png"
+    },
+    {
+     "slot": "胴",
+     "main": "会心率",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/524f71bdc8e1c997235b1ac47ccb7494.png"
+    },
+    {
+     "slot": "脚",
+     "main": "速度",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/d5d9f442dcf353f76a2d7de15e7ccb3f.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "HP%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/8d564b0f8b928bc6b0239261f7ebdfc3.png"
+    },
+    {
+     "slot": "縄",
+     "main": "防御%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/1d2fd8feb0fa4adf425d5469df46e360.png"
+    }
    ]
   },
   {
@@ -654,7 +1109,8 @@
    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ce359035d4cdd393cf993f04b4941a5d.png",
    "cone": {
     "now": "タケタケ冒険記 Lv80 重畳5",
-    "rec": "モチーフが第一候補"
+    "rec": "モチーフが第一候補",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/4522fdc26c67d73f1a0b689e209c77e2.png"
    },
    "set": {
     "now": "卜者4＋伊須磨州",
@@ -694,6 +1150,38 @@
      "unit": "%",
      "g8": "140%"
     }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/1d879fed4e91e27a28516f9455208322.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/a42d973db0e4d973da92249638e08e7b.png"
+    },
+    {
+     "slot": "胴",
+     "main": "会心率",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/3c513ff02dc35d9d5d00e5967660b6da.png"
+    },
+    {
+     "slot": "脚",
+     "main": "速度",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ea5e3ee974910940b3e22ffa87ebc49e.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "HP%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/8a33fc49fb9768957dca9a24dcf7a5d4.png"
+    },
+    {
+     "slot": "縄",
+     "main": "EP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/d18a82b4ca9934ea61e30df3b032bcfc.png"
+    }
    ]
   },
   {
@@ -702,7 +1190,8 @@
    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ca21363b272d3e84f84acfce33f1ec63.png",
    "cone": {
     "now": "物語をめくって Lv80 重畳5",
-    "rec": "モチーフが第一候補（超優秀）。他はヘルタ光円錐、物語をめくって"
+    "rec": "モチーフが第一候補（超優秀）。他はヘルタ光円錐、物語をめくって",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/3a5d543091a4e8e6ae54875c23a23ca7.png"
    },
    "set": {
     "now": "武神4＋神悟の樹庭",
@@ -743,6 +1232,288 @@
      "now": 98.6,
      "unit": "%",
      "g8": "100%以上"
+    }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ec179d93a1d677c98f4eb40d855fae18.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/29340363bd9b50b0036c6553fb01350f.png"
+    },
+    {
+     "slot": "胴",
+     "main": "治癒",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/a23634f16df32de35798f83f8028cf85.png"
+    },
+    {
+     "slot": "脚",
+     "main": "速度",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/e9b6cbbd0560fb4bc6d5cc51afe2ba3c.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "HP%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/7ea7b67a2351744ae6cf72f42668adb8.png"
+    },
+    {
+     "slot": "縄",
+     "main": "EP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ef622d789e8bd49c89bbe0496f4aec16.png"
+    }
+   ]
+  },
+  {
+   "name": "キャストリス",
+   "element": "quantum",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/b7dea9c2b8349691fa59112ce2d8afed.png",
+   "cone": {
+    "now": "永訣よ美しくあれ Lv80 重畳1",
+    "rec": "モチーフが最優秀。次点はナナシビト褒章の光円錐で、その中では「流すなら涙より汗」",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/1bfe56d6738d0394a91558c3af44d80e.png"
+   },
+   "set": {
+    "now": "詩人4＋エイジリア",
+    "rec": "トンネルは詩人がほぼ一択",
+    "note": "推奨オーナメントの名前は未確認"
+   },
+   "main": {
+    "now": "会心ダメ／HP%／HP%／HP%",
+    "rec": "胴は会心系、それ以外はHP%（オーブは与ダメでもよい）"
+   },
+   "subs": "会心率（画面68%で戦闘中100%）＞ 会心ダメ・HP。速度は上げすぎると詩人の効果が下がる",
+   "source": {
+    "label": "アサギゲームズ キャストリス最新育成解説",
+    "url": "https://www.youtube.com/watch?v=Uwa3C4syZr8",
+    "age": "1年前の動画",
+    "trust": "高"
+   },
+   "targets": [
+    {
+     "item": "会心率",
+     "target": 64.3,
+     "now": 51.5,
+     "unit": "%",
+     "memo": "詩人で+32%。画面68%で戦闘中100%"
+    },
+    {
+     "item": "会心ダメージ",
+     "target": 186.1,
+     "now": 190.9,
+     "unit": "%"
+    },
+    {
+     "item": "HP",
+     "target": 8578.7,
+     "now": 8730,
+     "unit": ""
+    }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/c9c264355032adc3c6b39eb565c6a301.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/e3b514238c3d666c0d92e40999ffa114.png"
+    },
+    {
+     "slot": "胴",
+     "main": "会心ダメ",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/23f21f748aeba55b456c0a941c5c7d8d.png"
+    },
+    {
+     "slot": "脚",
+     "main": "HP%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/1b6d5e468cc009ed9c28802d93e8e11f.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "HP%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/1423eee1e4fe1b518418a712bd752c92.png"
+    },
+    {
+     "slot": "縄",
+     "main": "HP%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/cb3b783988fe54c20544f394e636b699.png"
+    }
+   ]
+  },
+  {
+   "name": "長夜月",
+   "element": "ice",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ed43753eeb5dab4c198e48e693623d4b.png",
+   "cone": {
+    "now": "流すなら涙より汗 Lv80 重畳4",
+    "rec": "モチーフが最優秀。次点はキャストリスのモチーフ。星4・配布ではナナシビト褒章の光円錐とヘルタ交換の光円錐が強め",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/f9a97bfd94541bd57d80667643f20bb9.png"
+   },
+   "set": {
+    "now": "救世主4＋エイジリア",
+    "rec": "トンネルは救世主一択",
+    "note": "推奨オーナメントの名前は未確認"
+   },
+   "main": {
+    "now": "会心ダメ／HP%／HP%／HP%",
+    "rec": "会心率か会心ダメ／HP%か速度／HP%か与ダメ／HP%かEP"
+   },
+   "subs": "会心率（画面65%で戦闘中100%）＞ 会心ダメ・HP%・速度。速度は110くらいで0ラウンド2回行動しやすい",
+   "source": {
+    "label": "アサギゲームズ 長夜月育成完全解説",
+    "url": "https://www.youtube.com/watch?v=6nOvyZSn5Cg",
+    "age": "1年前の動画",
+    "trust": "高"
+   },
+   "targets": [
+    {
+     "item": "会心率",
+     "target": 65,
+     "now": 64.9,
+     "unit": "%",
+     "memo": "戦闘中に+35%される"
+    },
+    {
+     "item": "会心ダメージ",
+     "target": 186.1,
+     "now": 175.4,
+     "unit": "%"
+    },
+    {
+     "item": "HP",
+     "target": 6771.9,
+     "now": 7655,
+     "unit": ""
+    },
+    {
+     "item": "速度",
+     "target": 110.5,
+     "now": 110,
+     "unit": "",
+     "memo": "117あれば記憶3人でほぼ確定2回行動"
+    }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/28204a09da3ff488f8acfe36d3c7d976.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/e8bb74afc8d6e7f977b94839a59b06d1.png"
+    },
+    {
+     "slot": "胴",
+     "main": "会心ダメ",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/c8af7fa9a094546929f2e9e23d471a79.png"
+    },
+    {
+     "slot": "脚",
+     "main": "HP%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/59bb71b5ccd5b2dc67dc0c39182c292f.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "HP%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/1423eee1e4fe1b518418a712bd752c92.png"
+    },
+    {
+     "slot": "縄",
+     "main": "HP%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/cb3b783988fe54c20544f394e636b699.png"
+    }
+   ]
+  },
+  {
+   "name": "キュレネ",
+   "element": "ice",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/e251cbaedd7380820fdf6e29f6d9cb0a.png",
+   "cone": {
+    "now": "尽きぬ追憶 Lv80 重畳5",
+    "rec": "モチーフが非常に強力",
+    "note": "今の光円錐の順位は未確認。目標はモチーフなしの行を採用",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/4e82be4e5e0ef40225bff7c049c716ff.png"
+   },
+   "set": {
+    "now": "救世主4＋オンパロス",
+    "rec": "救世主が強い。ただし速度180に届かないなら速度セットで180を優先。記憶編成のオーナメントはオンパロス"
+   },
+   "main": {
+    "now": "会心ダメ／速度／HP%／HP%",
+    "rec": "HP%か会心ダメ／速度／HP%か与ダメ／HP%"
+   },
+   "subs": "どの編成でも速度180が最優先。記憶編成では200を無理に目指さなくてよい",
+   "source": {
+    "label": "アサギゲームズ キュレネ完全育成解説",
+    "url": "https://www.youtube.com/watch?v=4RRSH6ea7xw",
+    "age": "1年前の動画",
+    "trust": "高"
+   },
+   "targets": [
+    {
+     "item": "速度",
+     "target": 182.2,
+     "now": 167,
+     "unit": "",
+     "memo": "まず180が最優先"
+    },
+    {
+     "item": "HP",
+     "target": 6587.2,
+     "now": 5877,
+     "unit": ""
+    },
+    {
+     "item": "会心率",
+     "target": 42,
+     "now": 41,
+     "unit": "%"
+    },
+    {
+     "item": "会心ダメージ",
+     "target": 110.5,
+     "now": 196.1,
+     "unit": "%"
+    }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/28204a09da3ff488f8acfe36d3c7d976.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/e8bb74afc8d6e7f977b94839a59b06d1.png"
+    },
+    {
+     "slot": "胴",
+     "main": "会心ダメ",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/c8af7fa9a094546929f2e9e23d471a79.png"
+    },
+    {
+     "slot": "脚",
+     "main": "速度",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/59bb71b5ccd5b2dc67dc0c39182c292f.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "HP%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/cb3a6508b96044481fc4a9721f3b6310.png"
+    },
+    {
+     "slot": "縄",
+     "main": "HP%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/a236112d3de1e400b58ea2401e000849.png"
     }
    ]
   }
@@ -851,6 +1622,30 @@
    "text": "会心率をあと4.3%伸ばす",
    "reason": "画面70%で戦闘中に確定会心になる。優先度は低い",
    "done": false
+  },
+  {
+   "done": false,
+   "id": "t14",
+   "order": 3.5,
+   "char": "キャストリス",
+   "text": "会心率のサブステータスを伸ばす（胴を会心率にしてもよい）",
+   "reason": "画面68%で戦闘中100%になる。今は51.5%で、アサギの目安は64.3%"
+  },
+  {
+   "done": false,
+   "id": "t15",
+   "order": 5.5,
+   "char": "キュレネ",
+   "text": "速度のサブステータスを伸ばして180にする",
+   "reason": "どの編成でも速度180が最優先。今は167"
+  },
+  {
+   "done": false,
+   "id": "t16",
+   "order": 9.5,
+   "char": "長夜月",
+   "text": "会心ダメージのサブステータスを伸ばす",
+   "reason": "目安186.1%に対して今は175.4%。会心率・HP・速度はほぼ足りている"
   }
  ]
 }

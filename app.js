@@ -40,6 +40,14 @@
     }
     return a;
   }
+  // 装備1つ分（光円錐か遺物）。アイコンの下にメインステータスを出す。
+  function piece(icon, label, full, cls) {
+    var p = el('span', 'piece' + (cls ? ' ' + cls : '')); p.setAttribute('role', 'listitem'); p.setAttribute('aria-label', full); p.title = full;
+    var box = el('span', 'pimg');
+    if (icon) { var img = el('img'); img.alt = ''; img.loading = 'lazy'; img.decoding = 'async'; img.referrerPolicy = 'no-referrer'; img.addEventListener('error', function () { img.remove(); }); img.src = icon; box.appendChild(img); }
+    p.appendChild(box); p.appendChild(el('span', 'plab', label));
+    return p;
+  }
   function gauge(p, lv, cls) { var bar = el('div', 'bar ' + lv + (cls ? ' ' + cls : '')), fill = el('i'); fill.style.width = (Math.max(0, Math.min(1, p)) * 100).toFixed(1) + '%'; bar.appendChild(fill); return bar; }
   function scoreLevel(s) { return s >= 1 ? 'ok' : s >= NEAR ? 'near' : 'far'; }
 
@@ -139,6 +147,12 @@
       card.appendChild(box);
     }
     if (m.policy) { var p = el('p', 'policy'); p.appendChild(el('span', 'plabel', '方針')); p.appendChild(document.createTextNode(m.policy)); card.appendChild(p); }
+    if ((c.relics || []).length || (c.cone && c.cone.icon)) {
+      var eq = el('div', 'equip'); eq.setAttribute('role', 'list');
+      if (c.cone && c.cone.icon) eq.appendChild(piece(c.cone.icon, '光円錐', '光円錐 ' + (c.cone.now || ''), 'cone'));
+      (c.relics || []).forEach(function (r) { eq.appendChild(piece(r.icon, r.main, r.slot + ' メイン ' + r.main)); });
+      card.appendChild(eq);
+    }
     var dl = el('dl', 'gear');
     gearRow(dl, '光円錐', c.cone); gearRow(dl, 'セット', c.set); gearRow(dl, 'メイン', c.main);
     if (c.subs) { dl.appendChild(el('dt', null, 'サブ優先')); dl.appendChild(el('dd', null, c.subs)); }

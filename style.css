@@ -112,6 +112,14 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(-
 .near .pill{background:var(--near-soft);color:var(--near)}
 .policy{margin:0;font-size:.9rem;border-top:1px solid var(--line);padding-top:10px}
 .plabel{display:inline-block;font-size:.72rem;font-weight:800;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:0 6px;margin-right:8px}
+/* 装備のアイコン列：光円錐＋遺物6部位。下の文字はメインステータス */
+.equip{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;border-top:1px solid var(--line);padding-top:10px}
+.piece{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0}
+.pimg{display:block;width:100%;max-width:48px;aspect-ratio:1;border-radius:8px;background:var(--track);border:1px solid var(--line);overflow:hidden}
+.piece.cone .pimg{border-color:var(--accent)}
+.pimg img{display:block;width:100%;height:100%;object-fit:contain}
+.plab{font-size:.62rem;font-weight:700;line-height:1.2;color:var(--muted);text-align:center;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.piece.cone .plab{color:var(--accent)}
 dl.gear{margin:0;display:grid;grid-template-columns:5.2em 1fr;gap:8px 10px;font-size:.88rem;border-top:1px solid var(--line);padding-top:10px}
 dl.gear dt{color:var(--muted);font-weight:600}
 dl.gear dd{margin:0;min-width:0;overflow-wrap:anywhere}
