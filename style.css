@@ -179,6 +179,22 @@ dl.gear dd{margin:0;min-width:0;overflow-wrap:anywhere}
 .crow:first-of-type{border-top:0;padding-top:0}
 dl.gear.flat{border-top:0;padding-top:0}
 
+/* 今日やること・周回先・期限 */
+.card.today{border-color:var(--accent)}
+.drow{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px;width:100%;text-align:left;border:0;background:none;color:var(--ink);padding:2px 0;cursor:pointer;font:inherit}
+.dlabel{font-weight:700;font-size:.9rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.drow .pv{max-width:none}
+.trow2{font-size:.9rem;border-top:1px solid var(--line);padding-top:10px}
+.place{border-top:1px solid var(--line);padding-top:10px;display:flex;flex-direction:column;gap:6px}
+.wrow{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:10px;width:100%;text-align:left;border:0;background:none;color:var(--ink);padding:0;cursor:pointer;font:inherit}
+.wrow .who{display:block;font-weight:700;font-size:.9rem}
+.wrow .what{display:block;font-size:.78rem;color:var(--muted)}
+.phit{font-size:.62rem;font-weight:800;line-height:1.3;border-radius:3px;padding:0 4px;background:var(--track);color:var(--muted)}
+.phit.ok{background:var(--ok-soft);color:var(--ok)} .phit.near{background:var(--near-soft);color:var(--near)} .phit.far{background:var(--ng-soft);color:var(--ng)}
+.expired{margin:0;font-size:.88rem;font-weight:700;color:var(--ng);background:var(--ng-soft);border-radius:8px;padding:8px 10px}
+.segs.gone{color:var(--ng);font-weight:700}
+.prow.gone,.crow.gone{opacity:.55}
+
 /* やること */
 .todo{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:grid;grid-template-columns:auto auto 1fr;gap:4px 12px;align-items:start;cursor:pointer}
 .todo input{width:22px;height:22px;margin:7px 0 0;accent-color:var(--ok-fill)}

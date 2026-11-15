@@ -41,12 +41,49 @@
     return a;
   }
   // 装備1つ分（光円錐か遺物）。アイコンの下にメインステータスを出す。
-  function piece(icon, label, full, cls) {
+  function piece(icon, label, full, cls, r) {
+    var has = r && typeof r.hits === 'number' && r.rolls > 0;
+    if (has) full += '、有効サブ ' + r.hits + '回（全' + r.rolls + '回）';
     var p = el('span', 'piece' + (cls ? ' ' + cls : '')); p.setAttribute('role', 'listitem'); p.setAttribute('aria-label', full); p.title = full;
     var box = el('span', 'pimg');
     if (icon) { var img = el('img'); img.alt = ''; img.loading = 'lazy'; img.decoding = 'async'; img.referrerPolicy = 'no-referrer'; img.addEventListener('error', function () { img.remove(); }); img.src = icon; box.appendChild(img); }
     p.appendChild(box); p.appendChild(el('span', 'plab', label));
+    if (has) p.appendChild(el('span', 'phit ' + hitLevel(r), r.hits + '/' + r.rolls));
     return p;
+  }
+  // 厳選度：有効サブが伸びた回数の割合
+  function hitRatio(r) { return r && typeof r.hits === 'number' && r.rolls > 0 ? r.hits / r.rolls : null; }
+  function hitLevel(r) { var x = hitRatio(r); return x === null ? 'none' : x >= 0.6 ? 'ok' : x >= 0.4 ? 'near' : 'far'; }
+  // 期限：今日から何日後か（0＝今日まで、負＝終了）
+  function dayDiff(iso) { var p = String(iso).split('-'), e = new Date(+p[0], +p[1] - 1, +p[2]), n = new Date(); n = new Date(n.getFullYear(), n.getMonth(), n.getDate()); return Math.round((e - n) / 86400000); }
+  function dueText(n) { return n < 0 ? '期間終了' : n === 0 ? '今日まで' : 'あと' + n + '日'; }
+  function dueLevel(n) { return n < 0 ? 'none' : n <= 3 ? 'far' : n <= 14 ? 'near' : 'ok'; }
+  function md(iso) { var p = String(iso).split('-'); return (+p[1]) + '/' + (+p[2]); }
+  // 周回先：目標に届いていないキャラを、使うセットの入手場所ごとにまとめる
+  function farmPlan() {
+    var m = {}, P = S.data.places || {}, nTeam = {};
+    (S.data.teams || []).forEach(function (t) { (t.members || []).forEach(function (x) { nTeam[x.char] = (nTeam[x.char] || 0) + 1; }); });
+    (S.data.chars || []).forEach(function (c) {
+      var st = charStat(c), r = c.relics || []; if (!c.farm || !st.miss) return;
+      [[c.farm.t, c.farm.tset, 0, 4], [c.farm.o, c.farm.oset, 4, 6]].forEach(function (z) {
+        var w = -1, wr = 1;
+        for (var i = z[2]; i < z[3]; i++) { var x = hitRatio(r[i]); if (x !== null && x < wr) { wr = x; w = i; } }
+        if (!m[z[0]]) m[z[0]] = { name: z[0], p: P[z[0]] || {}, who: [], score: 0 };
+        // 複数の編成で使うキャラほど重く数える
+        var wt = st.miss * (1 - wr) * Math.max(1, nTeam[c.name] || 0);
+        m[z[0]].who.push({ c: c, set: z[1], w: w, ratio: wr, miss: st.miss, wt: wt }); m[z[0]].score += wt;
+      });
+    });
+    return Object.keys(m).map(function (k) { m[k].who.sort(function (a, b) { return b.wt - a.wt; }); return m[k]; }).sort(function (a, b) { return b.score - a.score; });
+  }
+  function deadlines() {
+    var out = [];
+    (S.data.guides || []).forEach(function (g) { if (g.end) out.push({ label: g.name + '（' + (g.state || '') + '）', n: dayDiff(g.end), end: g.end, go: function () { S.guide = g.id; setTab('guide'); } }); });
+    ((S.data.gacha || {}).groups || []).forEach(function (gr) {
+      if (!gr.end) return; var soon = gr.start && dayDiff(gr.start) > 0;
+      out.push({ label: 'ガチャ ' + gr.picks.join('・'), n: dayDiff(gr.end), end: gr.end, from: soon ? gr.start : null, go: function () { setTab('gacha'); } });
+    });
+    return out.sort(function (a, b) { return (a.n < 0) - (b.n < 0) || a.n - b.n; });
   }
   function gauge(p, lv, cls) { var bar = el('div', 'bar ' + lv + (cls ? ' ' + cls : '')), fill = el('i'); fill.style.width = (Math.max(0, Math.min(1, p)) * 100).toFixed(1) + '%'; bar.appendChild(fill); return bar; }
   function scoreLevel(s) { return s >= 1 ? 'ok' : s >= NEAR ? 'near' : 'far'; }
@@ -82,7 +119,26 @@
     hero.appendChild(gauge(total ? okN / total : 0, 'ok', 'big'));
     var lg = el('div', 'keys');
     [['ok', '達成'], ['near', 'あと少し'], ['far', '未達']].forEach(function (k) { var s = el('span', 'key'); s.appendChild(el('i', 'dot ' + k[0])); s.appendChild(document.createTextNode(k[1])); lg.appendChild(s); });
-    hero.appendChild(lg); view.appendChild(hero);
+    hero.appendChild(lg);
+
+    // 今日やること：期限の近いもの、いちばん効く周回先、次のやること
+    var by0 = charBy(), today = el('section', 'card today'); var th = el('div', 'cardhead'); th.appendChild(el('h2', null, '今日やること')); today.appendChild(th);
+    var dl = deadlines();
+    dl.forEach(function (x) {
+      var b = el('button', 'drow'); b.type = 'button';
+      b.appendChild(el('span', 'dlabel', x.label));
+      b.appendChild(el('span', 'pv ' + (x.from ? 'none' : dueLevel(x.n)), x.n < 0 ? '期間終了・要更新' : x.from ? md(x.from) + 'から' : dueText(x.n) + '（' + md(x.end) + '）'));
+      b.addEventListener('click', x.go); today.appendChild(b);
+    });
+    var plan = farmPlan();
+    if (plan.length) {
+      var f = plan[0], fr = el('div', 'trow2'); fr.appendChild(el('span', 'plabel', '周回'));
+      fr.appendChild(document.createTextNode(f.name + '（' + (f.p.sets || '') + '）：' + f.who.slice(0, 4).map(function (w) { return w.c.name.replace(/^星神★/, '').replace(/・.*/, ''); }).join('・')));
+      today.appendChild(fr);
+    }
+    var nx = todos().filter(function (t) { return !t.done; }).sort(function (a, b) { return a.order - b.order; })[0];
+    if (nx) { var nr = el('div', 'trow2'); nr.appendChild(el('span', 'plabel', '育成')); nr.appendChild(document.createTextNode((nx.char || '') + '：' + (nx.text || ''))); today.appendChild(nr); }
+    view.appendChild(today); view.appendChild(hero);
 
     teams.forEach(function (team) {
       var s = teamStat(team), box = el('section', 'card team');
@@ -116,6 +172,48 @@
       });
       var more = el('button', 'more', 'やることをすべて見る'); more.type = 'button'; more.addEventListener('click', function () { setTab('todo'); }); nb.appendChild(more);
       view.appendChild(nb);
+    }
+
+    // 周回先
+    if (plan.length) {
+      var fc = el('section', 'card'); var fh = el('div', 'cardhead'); fh.appendChild(el('h2', null, '周回先')); fh.appendChild(el('span', 'grper', '効果が大きい順')); fc.appendChild(fh);
+      var SLOT = ['頭', '手', '胴', '脚', 'オーブ', '縄'];
+      plan.slice(0, S.farmAll ? plan.length : 5).forEach(function (pl, i) {
+        var box = el('div', 'place'); var ph = el('div', 'conetop'); ph.appendChild(el('span', 'rank', String(i + 1))); ph.appendChild(el('span', 'conename', pl.name));
+        ph.appendChild(el('span', 'lbl', pl.p.kind || '')); box.appendChild(ph);
+        box.appendChild(el('p', 'enemy', (pl.p.sets || '') + (pl.p.where ? ' ・ ' + pl.p.where : '')));
+        pl.who.forEach(function (w) {
+          var b = el('button', 'wrow'); b.type = 'button'; b.appendChild(avatar(w.c.name, w.c, 'sm'));
+          var bd = el('span', 'nextbody'); bd.appendChild(el('span', 'who', w.c.name));
+          var r = w.w >= 0 ? w.c.relics[w.w] : null;
+          bd.appendChild(el('span', 'what', w.set + (r ? ' ・ 弱い部位は' + SLOT[w.w] + '（有効' + r.hits + '/' + r.rolls + '）' : '') + ' ・ 未達' + w.miss)); b.appendChild(bd);
+          var tm = (S.data.teams || []).filter(function (t) { return (t.members || []).some(function (m) { return m.char === w.c.name; }); })[0];
+          b.addEventListener('click', function () { if (tm) setTab(tm.name, w.c.name); }); box.appendChild(b);
+        });
+        fc.appendChild(box);
+      });
+      if (plan.length > 5) { var fm = el('button', 'more', S.farmAll ? '上位5件だけにする' : 'すべての周回先を見る（' + plan.length + '件）'); fm.type = 'button'; fm.addEventListener('click', function () { S.farmAll = !S.farmAll; render(); }); fc.appendChild(fm); }
+      fc.appendChild(el('p', 'teamnote', '目標に届いていないキャラだけを数えています。複数の編成で使うキャラと、有効サブの回数が少ない部位を重く見ています。'));
+      view.appendChild(fc);
+    }
+
+    // 編成の取り合い
+    var use = {}; teams.forEach(function (t) { (t.members || []).forEach(function (m) { (use[m.char] = use[m.char] || []).push(t.name); }); });
+    var shared = Object.keys(use).filter(function (k) { return use[k].length > 1; }).sort(function (a, b) { return use[b].length - use[a].length; });
+    if (shared.length) {
+      var sc = el('section', 'card'); var sh = el('div', 'cardhead'); sh.appendChild(el('h2', null, '編成の取り合い')); sc.appendChild(sh);
+      shared.forEach(function (n) {
+        var r = el('div', 'nextrow'); r.appendChild(avatar(n, by0[n], 'sm'));
+        var b = el('span', 'nextbody'); b.appendChild(el('span', 'who', n)); var ch = el('span', 'chips');
+        use[n].forEach(function (t) { ch.appendChild(el('span', 'elem', t)); }); b.appendChild(ch); r.appendChild(b); sc.appendChild(r);
+      });
+      var free = [], T = teams.map(function (t) { return { n: t.name, m: (t.members || []).map(function (m) { return m.char; }) }; });
+      var clash = function (a, b) { return a.m.some(function (x) { return b.m.indexOf(x) >= 0; }); };
+      for (var i = 0; i < T.length; i++) for (var j = i + 1; j < T.length; j++) for (var k = j + 1; k < T.length; k++) if (!clash(T[i], T[j]) && !clash(T[i], T[k]) && !clash(T[j], T[k])) free.push(T[i].n + '＋' + T[j].n + '＋' + T[k].n);
+      var fs = el('div', 'gsec'); fs.appendChild(el('h3', null, 'そのまま同時に組める3編成（' + free.length + '通り）'));
+      if (free.length) { var ul = el('ul', 'sumlist'); free.forEach(function (x) { ul.appendChild(el('li', null, x)); }); fs.appendChild(ul); }
+      else fs.appendChild(el('p', 'vtext', '誰かを入れ替えないと3編成は組めません。'));
+      sc.appendChild(fs); view.appendChild(sc);
     }
   }
 
@@ -154,8 +252,16 @@
     if ((c.relics || []).length || (c.cone && c.cone.icon)) {
       var eq = el('div', 'equip'); eq.setAttribute('role', 'list');
       if (c.cone && c.cone.icon) eq.appendChild(piece(c.cone.icon, '光円錐', '光円錐 ' + (c.cone.now || ''), 'cone'));
-      (c.relics || []).forEach(function (r) { eq.appendChild(piece(r.icon, r.main, r.slot + ' メイン ' + r.main)); });
+      (c.relics || []).forEach(function (r) { eq.appendChild(piece(r.icon, r.main, r.slot + ' メイン ' + r.main, null, r)); });
       card.appendChild(eq);
+      var weak = (c.relics || []).filter(function (r) { var x = hitRatio(r); return x !== null && x < 0.4; }).sort(function (a, b) { return hitRatio(a) - hitRatio(b); });
+      if ((c.relics || []).some(function (r) { return hitRatio(r) !== null; })) {
+        var wk = el('p', 'tmeta');
+        wk.appendChild(el('span', null, weak.length ? '厳選が弱い部位：' + weak.map(function (r) { return r.slot + '（' + r.hits + '/' + r.rolls + '）'; }).join('、') : '厳選が弱い部位はありません'));
+        wk.appendChild(el('span', null, '数字は有効サブが伸びた回数／全回数'));
+        if (c.farm) wk.appendChild(el('span', null, '周回：' + c.farm.t + '、' + c.farm.o));
+        card.appendChild(wk);
+      }
     }
     var dl = el('dl', 'gear');
     gearRow(dl, '光円錐', c.cone); gearRow(dl, 'セット', c.set); gearRow(dl, 'メイン', c.main);
@@ -187,13 +293,16 @@
     var seg = el('div', 'seg'); seg.setAttribute('role', 'tablist'); seg.setAttribute('aria-label', '高難度の種類');
     gs.forEach(function (g) {
       var b = el('button', 'segb'); b.type = 'button'; b.setAttribute('role', 'tab'); b.setAttribute('aria-selected', String(g === cur));
-      b.appendChild(el('span', 'segn', g.name)); if (g.state) b.appendChild(el('span', 'segs', g.state));
+      var gone = g.end && dayDiff(g.end) < 0;
+      b.appendChild(el('span', 'segn', g.name)); b.appendChild(el('span', 'segs' + (gone ? ' gone' : ''), gone ? '期間終了' : g.end ? dueText(dayDiff(g.end)) : (g.state || '')));
       b.addEventListener('click', function () { S.guide = g.id; try { localStorage.setItem('hsr-guide', g.id); } catch (e) {} render(); });
       seg.appendChild(b);
     });
     view.appendChild(seg);
     var hero = el('section', 'hero');
     var hh = el('div', 'cardhead'); hh.appendChild(el('h2', null, cur.full || cur.name)); if (cur.period) hh.appendChild(el('span', 'role', cur.period)); hero.appendChild(hh);
+    if (cur.end && dayDiff(cur.end) < 0) hero.appendChild(el('p', 'expired', 'この期は ' + md(cur.end) + ' で終了しました。下の内容は前の期のものです。次の期の解説が出たら更新が必要です。'));
+    else if (cur.state) hero.appendChild(el('p', 'gline', '進み具合：' + cur.state));
     if (cur.record) { var r = el('p', 'gline'); r.appendChild(el('span', 'plabel', '今の記録')); r.appendChild(document.createTextNode(cur.record)); hero.appendChild(r); }
     if (cur.rule) { var u = el('p', 'gline'); u.appendChild(el('span', 'plabel', 'ルール')); u.appendChild(document.createTextNode(cur.rule)); hero.appendChild(u); }
     view.appendChild(hero);
@@ -276,15 +385,19 @@
     var by = charBy();
     var hero = el('section', 'hero');
     var hh = el('div', 'cardhead'); hh.appendChild(el('h2', null, '取得のおすすめ')); if (g.asof) hh.appendChild(el('span', 'role', g.asof + ' 時点')); hero.appendChild(hh);
+    if ((g.groups || []).some(function (gr) { return gr.end && dayDiff(gr.end) < 0; })) hero.appendChild(el('p', 'expired', '終了したガチャがあります。おすすめの内容は ' + (g.asof || '') + ' 時点のもので、更新が必要です。'));
     var ul = el('ul', 'sumlist'); (g.summary || []).forEach(function (s) { ul.appendChild(el('li', null, s)); }); hero.appendChild(ul);
     view.appendChild(hero);
     // 一覧（タップでそのキャラへ）
     var idx = el('section', 'card'); var ih = el('div', 'cardhead'); ih.appendChild(el('h2', null, 'キャラ')); idx.appendChild(ih);
     (g.groups || []).forEach(function (gr) {
-      var gh = el('div', 'grhead'); gh.appendChild(el('span', 'grname', gr.label)); gh.appendChild(el('span', 'grper', gr.period)); idx.appendChild(gh);
+      var gone = gr.end && dayDiff(gr.end) < 0, soon = gr.start && dayDiff(gr.start) > 0;
+      var gh = el('div', 'grhead'); gh.appendChild(el('span', 'grname', gr.label)); gh.appendChild(el('span', 'grper', gr.period));
+      if (gr.end) gh.appendChild(el('span', 'pv ' + (gone || soon ? 'none' : dueLevel(dayDiff(gr.end))), gone ? '終了・要更新' : soon ? md(gr.start) + 'から' : dueText(dayDiff(gr.end))));
+      idx.appendChild(gh);
       (gr.picks || []).forEach(function (n) {
         var p = pk[n]; if (!p) return;
-        var b = el('button', 'prow ' + (p.level || 'none')); b.type = 'button';
+        var b = el('button', 'prow ' + (p.level || 'none') + (gone ? ' gone' : '')); b.type = 'button';
         b.appendChild(avatar(n, by[n] || { element: p.element }, 'sm'));
         var body = el('span', 'nextbody'); body.appendChild(el('span', 'who', n)); body.appendChild(el('span', 'what', p.own || '')); b.appendChild(body);
         b.appendChild(el('span', 'pv ' + (p.level || 'none'), p.verdict || ''));
@@ -296,7 +409,8 @@
     if ((g.cones || []).length) {
       var cs = el('section', 'card'); var ch = el('div', 'cardhead'); ch.appendChild(el('h2', null, '光円錐')); cs.appendChild(ch);
       g.cones.forEach(function (k) {
-        var r = el('div', 'crow'); var top = el('div', 'conetop'); top.appendChild(el('span', 'conename', k.name)); top.appendChild(el('span', 'pv ' + (k.level || 'none'), k.verdict || '')); r.appendChild(top);
+        var kg = k.end && dayDiff(k.end) < 0;
+        var r = el('div', 'crow' + (kg ? ' gone' : '')); var top = el('div', 'conetop'); top.appendChild(el('span', 'conename', k.name)); top.appendChild(el('span', 'pv ' + (kg ? 'none' : (k.level || 'none')), kg ? '終了' : (k.verdict || ''))); r.appendChild(top);
         r.appendChild(el('p', 'enemy', (k.who || '') + (k.period ? ' ・ ' + k.period : '')));
         if (k.text) r.appendChild(el('p', 'vtext', k.text)); cs.appendChild(r);
       });
