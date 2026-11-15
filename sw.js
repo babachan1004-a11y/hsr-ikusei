@@ -1,6 +1,6 @@
 // オフラインでも最後に見たデータを表示するための Service Worker。
 // どのファイルもまずネットから取り、取れなければキャッシュを返す（常に最新を優先）。
-const CACHE = 'hsr-v2';
+const CACHE = 'hsr-v3';
 const SHELL = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png'];
 
 self.addEventListener('install', (e) => {

@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   var S = { data: null, tab: null, done: {}, jump: null };
-  try { S.tab = localStorage.getItem('hsr-tab'); } catch (e) {}
+  try { S.tab = localStorage.getItem('hsr-tab'); S.guide = localStorage.getItem('hsr-guide'); } catch (e) {}
   try { S.done = JSON.parse(localStorage.getItem('hsr-done') || '{}') || {}; } catch (e) { S.done = {}; }
 
   var ELEMENT = { wind: '風', lightning: '雷', quantum: '量子', physical: '物理', fire: '炎', ice: '氷', imaginary: '虚数' };
@@ -61,8 +61,10 @@
   function renderTabs() {
     var tabs = $('tabs'); tabs.textContent = '';
     var names = (S.data.teams || []).map(function (t) { return t.name; });
-    if (S.tab !== 'todo' && S.tab !== 'all' && names.indexOf(S.tab) < 0) S.tab = 'all';
+    var hasGuide = (S.data.guides || []).length > 0;
+    if (S.tab !== 'todo' && S.tab !== 'all' && !(S.tab === 'guide' && hasGuide) && names.indexOf(S.tab) < 0) S.tab = 'all';
     tabs.appendChild(tabButton('全体', 'all', null));
+    if (hasGuide) tabs.appendChild(tabButton('攻略', 'guide', null));
     (S.data.teams || []).forEach(function (t) { var s = teamStat(t); tabs.appendChild(tabButton(t.name, t.name, s.miss ? '未達' + s.miss : '達成', s.miss ? 'far' : 'ok')); });
     var open = todos().filter(function (t) { return !t.done; }).length;
     tabs.appendChild(tabButton('やること', 'todo', String(open), open ? 'far' : 'ok'));
@@ -176,6 +178,51 @@
     members(team).forEach(function (x) { view.appendChild(renderCard(x)); });
   }
 
+  // ---- 攻略 ----
+  function renderGuides(view) {
+    var gs = S.data.guides || [], by = charBy(), roster = S.data.roster || {};
+    var cur = gs.filter(function (g) { return g.id === S.guide; })[0] || gs[0];
+    var seg = el('div', 'seg'); seg.setAttribute('role', 'tablist'); seg.setAttribute('aria-label', '高難度の種類');
+    gs.forEach(function (g) {
+      var b = el('button', 'segb'); b.type = 'button'; b.setAttribute('role', 'tab'); b.setAttribute('aria-selected', String(g === cur));
+      b.appendChild(el('span', 'segn', g.name)); if (g.state) b.appendChild(el('span', 'segs', g.state));
+      b.addEventListener('click', function () { S.guide = g.id; try { localStorage.setItem('hsr-guide', g.id); } catch (e) {} render(); });
+      seg.appendChild(b);
+    });
+    view.appendChild(seg);
+    var hero = el('section', 'hero');
+    var hh = el('div', 'cardhead'); hh.appendChild(el('h2', null, cur.full || cur.name)); if (cur.period) hh.appendChild(el('span', 'role', cur.period)); hero.appendChild(hh);
+    if (cur.record) { var r = el('p', 'gline'); r.appendChild(el('span', 'plabel', '今の記録')); r.appendChild(document.createTextNode(cur.record)); hero.appendChild(r); }
+    if (cur.rule) { var u = el('p', 'gline'); u.appendChild(el('span', 'plabel', 'ルール')); u.appendChild(document.createTextNode(cur.rule)); hero.appendChild(u); }
+    view.appendChild(hero);
+    (cur.parts || []).forEach(function (p) {
+      var card = el('section', 'card part' + (p.done ? ' ok' : ''));
+      var head = el('div', 'cardhead'); head.appendChild(el('h2', null, p.name));
+      if (p.basis) head.appendChild(el('span', 'basis' + (p.done ? ' ok' : ''), p.basis)); card.appendChild(head);
+      if (p.enemy) card.appendChild(el('p', 'enemy', p.enemy));
+      var team = el('div', 'gteam'); team.setAttribute('role', 'list');
+      (p.team || []).forEach(function (n) {
+        var m = el('span', 'gmem'); m.setAttribute('role', 'listitem'); m.appendChild(avatar(n, by[n] || roster[n], 'lg'));
+        m.appendChild(el('span', 'tname', n.replace(/^星神★/, '').replace(/・.*/, ''))); team.appendChild(m);
+      });
+      card.appendChild(team);
+      if (p.point) card.appendChild(el('p', 'gtext', p.point));
+      if (p.note) { var nt = el('p', 'policy'); nt.appendChild(el('span', 'plabel', 'メモ')); nt.appendChild(document.createTextNode(p.note)); card.appendChild(nt); }
+      view.appendChild(card);
+    });
+    if ((cur.sources || []).length || cur.srcnote) {
+      var sc = el('section', 'card'); var sh = el('div', 'cardhead'); sh.appendChild(el('h2', null, '出典')); sc.appendChild(sh);
+      (cur.sources || []).forEach(function (s) {
+        var row = el('div', 'src plain'); row.appendChild(el('span', 'trust' + (s.trust === '高' ? ' hi' : ''), '信頼度 ' + (s.trust || '—')));
+        var a = el('a', null, s.label); a.href = s.url; a.target = '_blank'; a.rel = 'noopener'; row.appendChild(a);
+        if (s.age) row.appendChild(el('span', null, s.age)); sc.appendChild(row);
+      });
+      if (cur.srcnote) sc.appendChild(el('p', 'teamnote', cur.srcnote));
+      sc.appendChild(el('p', 'teamnote', '「私の案」と書いた部分は、出典の方針をあなたの手持ちに当てはめたものです。'));
+      view.appendChild(sc);
+    }
+  }
+
   // ---- やること ----
   function renderTodos(view) {
     var items = todos().sort(function (a, b) { return (a.done - b.done) || (a.order - b.order); });
@@ -203,6 +250,7 @@
     renderTabs(); view.textContent = '';
     if (S.tab === 'todo') { renderTodos(view); return; }
     if (S.tab === 'all') { renderOverview(view); return; }
+    if (S.tab === 'guide') { renderGuides(view); return; }
     var team = (S.data.teams || []).filter(function (t) { return t.name === S.tab; })[0]; if (!team) return;
     renderTeam(view, team);
     if (S.jump) { var target = document.getElementById('c-' + S.jump); S.jump = null; if (target) target.scrollIntoView({ block: 'start' }); }
