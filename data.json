@@ -161,6 +161,32 @@
      "policy": "速度は203で足りている。残りはHP。"
     }
    ]
+  },
+  {
+   "name": "ホタル",
+   "note": "超撃破編成。アサギによると相方のダリア（未所持）の有無で倍以上の差があり、「ホタルを使うならダリアは絶対に取る」という評価。ダリアがいない今は、流離人・ルアン・メェイ・霊砂で組む。炎弱点の敵と、弱点撃破が重要な末日の幻影に向く。",
+   "members": [
+    {
+     "char": "ホタル",
+     "role": "主力",
+     "policy": "撃破特効と速度は目安に届いている。残りは攻撃力（攻撃も撃破特効に変換される）。弱点撃破はできるだけホタルで取る。"
+    },
+    {
+     "char": "帰忘の流離人",
+     "role": "サポート",
+     "policy": "撃破特効が68.6%で、目安の220%に大きく足りない。ここがいちばんの伸びしろ。枠は調和の開拓者でも代用できる。"
+    },
+    {
+     "char": "ルアン・メェイ",
+     "role": "サポート",
+     "policy": "撃破特効は足りている。必殺技を3ターンで回せるEPを優先。"
+    },
+    {
+     "char": "霊砂",
+     "role": "耐久",
+     "policy": "速度は154でよい。撃破特効をあと34.5%。使うなら光円錐をLv80に。"
+    }
+   ]
   }
  ],
  "chars": [
@@ -1653,6 +1679,304 @@
      "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/411218cb3709895494728469b0a463d1.png"
     }
    ]
+  },
+  {
+   "name": "ホタル",
+   "element": "fire",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ff7bf3d035e53150a97407008384965a.png",
+   "cone": {
+    "now": "とある星神の殞落を記す Lv80 重畳5",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/a5ead62a39bf81036ebb986c4310cc13.png",
+    "rec": "ファイノンのモチーフかホタルのモチーフが強め。ヘルタ交換の「とある星神の殞落を記す」がかなり優秀で、基本はこれ（今の装備）",
+    "note": "アサギは、ホタルのモチーフを今から取るのは微妙としている"
+   },
+   "set": {
+    "now": "鉄騎4＋鋳煉宮",
+    "rec": "鉄騎4＋鋳煉宮がほぼ一択（今の装備と同じ）"
+   },
+   "main": {
+    "now": "攻撃力%／速度／攻撃力%／撃破特効",
+    "rec": "胴 攻撃／靴 速度／オーブ 攻撃／縄 撃破（今の装備と同じ）"
+   },
+   "subs": "撃破特効（戦闘中300%が目標）＞ 速度 ＞ 攻撃 ＞ 耐久系",
+   "source": {
+    "label": "アサギゲームズ ホタル・ダリア最新育成解説",
+    "url": "https://www.youtube.com/watch?v=NTlvMv9e-vY",
+    "age": "6か月前の動画",
+    "trust": "高"
+   },
+   "targets": [
+    {
+     "item": "攻撃力",
+     "target": 2792.6,
+     "now": 2573,
+     "unit": "",
+     "memo": "「とある星神の殞落を記す」の行"
+    },
+    {
+     "item": "撃破特効",
+     "target": 187.7,
+     "now": 188.7,
+     "unit": "%"
+    },
+    {
+     "item": "速度",
+     "target": 140.2,
+     "now": 145,
+     "unit": "",
+     "memo": "134が最低ライン。理想は179だがかなり難しい"
+    }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/a7389e53028918d573ca4b6234d478c4.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/36251a975b1389e2457c238a0fb7eaff.png"
+    },
+    {
+     "slot": "胴",
+     "main": "攻撃%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/f9f4ab2b1d60b14a40f0388a6635b38a.png"
+    },
+    {
+     "slot": "脚",
+     "main": "速度",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/0748bf4ff104b2135624934ba0a3dbf1.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "攻撃%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/380ed249aab8873ed1ae737e16233c42.png"
+    },
+    {
+     "slot": "縄",
+     "main": "撃破",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/85a3949d37cfa842e465973884def6ab.png"
+    }
+   ]
+  },
+  {
+   "name": "帰忘の流離人",
+   "element": "fire",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/8f3cc41cc957b98d858a3a706205ac5e.png",
+   "cone": {
+    "now": "獲物の視線 Lv70 重畳3",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ef981e9645fe04b16af47922198ed36d.png",
+    "rec": "モチーフが第一候補",
+    "note": "使うならLv80に上げる"
+   },
+   "set": {
+    "now": "時計屋2＋鉄騎2＋鋳煉宮",
+    "rec": "撃破特効220%以上なら鉄騎4、届かないなら怪盗4。オーナメントは敵の弱点で変える"
+   },
+   "main": {
+    "now": "効果命中／速度／防御力%／EP回復効率",
+    "rec": "胴 効果命中／靴 速度／縄 EPか撃破／オーブ 耐久系（今の装備と同じ）"
+   },
+   "subs": "撃破特効（220%までは優先）＞ 効果命中（66.7%まで）＞ 速度（元から速いので適当でよい）",
+   "source": {
+    "label": "アサギゲームズ 帰忘の流離人の完全育成解説",
+    "url": "https://www.youtube.com/watch?v=P3L-DX1Fhw4",
+    "age": "1年前の動画",
+    "trust": "高"
+   },
+   "targets": [
+    {
+     "item": "撃破特効",
+     "target": 220,
+     "now": 68.6,
+     "unit": "%",
+     "memo": "撃破縄にしても届かないあいだは、縄はEPのままでよい"
+    },
+    {
+     "item": "効果命中",
+     "target": 66.7,
+     "now": 84.8,
+     "unit": "%"
+    }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/e3c0795e931d08ee360df4e4d3afbc5d.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/42b76f3338abac757022f7838e99971d.png"
+    },
+    {
+     "slot": "胴",
+     "main": "命中",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/f9f4ab2b1d60b14a40f0388a6635b38a.png"
+    },
+    {
+     "slot": "脚",
+     "main": "速度",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/0748bf4ff104b2135624934ba0a3dbf1.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "防御%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/380ed249aab8873ed1ae737e16233c42.png"
+    },
+    {
+     "slot": "縄",
+     "main": "EP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/85a3949d37cfa842e465973884def6ab.png"
+    }
+   ]
+  },
+  {
+   "name": "ルアン・メェイ",
+   "element": "ice",
+   "icon": "https://fastcdn.hoyoverse.com/static-resource-v2/2026/01/22/051b502dfdf55fef9ae6a8923c659a81_7714960152695640741.png",
+   "cone": {
+    "now": "記憶の中の姿 Lv80 重畳3",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/a5e7332dda11ca0972c6182d0f435159.png",
+    "rec": "今の「記憶の中の姿」でよい（SPを供給できる）"
+   },
+   "set": {
+    "now": "時計屋2＋鉄騎2＋ウェンワーク",
+    "rec": "自由度が高い。トンネルは時計屋・メッセンジャー・鉄騎、オーナメントはウェンワークか鋳煉宮"
+   },
+   "main": {
+    "now": "HP%／速度／HP%／EP回復効率",
+    "rec": "靴 速度／縄 EP（撃破縄より必殺技を早く回すほうが強い）／胴・オーブ 耐久系"
+   },
+   "subs": "撃破特効・速度。ほかのサポーターより速度厳選の優先度は低い",
+   "source": {
+    "label": "アサギゲームズ ルアン・メェイ復刻時の解説",
+    "url": "https://www.youtube.com/watch?v=_vMCHHhWedE",
+    "age": "2年前の動画",
+    "trust": "高"
+   },
+   "targets": [
+    {
+     "item": "撃破特効",
+     "target": 160,
+     "now": 165.7,
+     "unit": "%",
+     "memo": "戦闘中180%が目標（戦闘中に+20%される）。撃破編成ではこだわらなくてよい"
+    }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/e3c0795e931d08ee360df4e4d3afbc5d.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/36251a975b1389e2457c238a0fb7eaff.png"
+    },
+    {
+     "slot": "胴",
+     "main": "HP%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/f9f4ab2b1d60b14a40f0388a6635b38a.png"
+    },
+    {
+     "slot": "脚",
+     "main": "速度",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/6cc0c841559cbf9405560dccc7578ab0.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "HP%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/26725cddc638996811ead1ea2061987c.png"
+    },
+    {
+     "slot": "縄",
+     "main": "EP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ac240f182615b4e5dd346597e72ac4eb.png"
+    }
+   ]
+  },
+  {
+   "name": "霊砂",
+   "element": "fire",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/646d644dc226152a87aee24eb3b7fc17.png",
+   "cone": {
+    "now": "何が真か Lv70 重畳2",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/8ccf16af8ff1c0a12e2a58f71be3de2c.png",
+    "rec": "モチーフが第一候補",
+    "note": "使うならLv80に上げる"
+   },
+   "set": {
+    "now": "鉄騎4＋鋳煉宮",
+    "rec": "鉄騎4が無難。ホタル編成ならオーナメントは鋳煉宮（今の装備と同じ）"
+   },
+   "main": {
+    "now": "治癒量／速度／攻撃力%／撃破特効",
+    "rec": "胴 治癒・攻撃・耐久／靴 速度／縄 EP／オーブ 攻撃か耐久"
+   },
+   "subs": "速度（160・143・134のどれか）＞ 撃破特効（戦闘中200%、余裕があれば250%）＞ 攻撃%",
+   "source": {
+    "label": "アサギゲームズ 霊砂のビルド育成解説",
+    "url": "https://www.youtube.com/watch?v=mOmyKKJGPog",
+    "age": "2年前の動画",
+    "trust": "高"
+   },
+   "targets": [
+    {
+     "item": "撃破特効",
+     "target": 187.7,
+     "now": 153.2,
+     "unit": "%"
+    },
+    {
+     "item": "速度",
+     "target": 154,
+     "now": 154,
+     "unit": "",
+     "memo": "ホタル編成ではホタルより少し遅くする"
+    },
+    {
+     "item": "攻撃力",
+     "target": 1930,
+     "now": 2242,
+     "unit": ""
+    }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/a7389e53028918d573ca4b6234d478c4.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/36251a975b1389e2457c238a0fb7eaff.png"
+    },
+    {
+     "slot": "胴",
+     "main": "治癒",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/f9f4ab2b1d60b14a40f0388a6635b38a.png"
+    },
+    {
+     "slot": "脚",
+     "main": "速度",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/0748bf4ff104b2135624934ba0a3dbf1.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "攻撃%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/380ed249aab8873ed1ae737e16233c42.png"
+    },
+    {
+     "slot": "縄",
+     "main": "撃破",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/85a3949d37cfa842e465973884def6ab.png"
+    }
+   ]
   }
  ],
  "todos": [
@@ -1799,28 +2123,28 @@
    "char": "開拓者",
    "text": "長夜月編成で使うときは記憶に切り替え、救世主セットと記憶の光円錐を付ける",
    "reason": "今は愉悦用の装備（卜者＋タケタケ冒険記）。記憶では会心ダメ239.9%・速度160が目安"
+  },
+  {
+   "done": false,
+   "id": "t19",
+   "order": 14,
+   "char": "帰忘の流離人",
+   "text": "撃破特効のサブステータスを伸ばす（届かないあいだは怪盗セットも候補）",
+   "reason": "ホタル編成用。目安220%に対して今は68.6%"
+  },
+  {
+   "done": false,
+   "id": "t20",
+   "order": 15,
+   "char": "霊砂",
+   "text": "撃破特効をあと34.5%伸ばし、光円錐をLv80にする",
+   "reason": "ホタル編成用。目安187.7%に対して今は153.2%。光円錐「何が真か」はLv70"
   }
  ],
  "roster": {
   "符玄": {
    "element": "quantum",
    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/f11f74d25e7c8dcc95d60f91007c2b47.png"
-  },
-  "ホタル": {
-   "element": "fire",
-   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ff7bf3d035e53150a97407008384965a.png"
-  },
-  "帰忘の流離人": {
-   "element": "fire",
-   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/8f3cc41cc957b98d858a3a706205ac5e.png"
-  },
-  "ルアン・メェイ": {
-   "element": "ice",
-   "icon": "https://fastcdn.hoyoverse.com/static-resource-v2/2026/01/22/051b502dfdf55fef9ae6a8923c659a81_7714960152695640741.png"
-  },
-  "霊砂": {
-   "element": "fire",
-   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/646d644dc226152a87aee24eb3b7fc17.png"
   }
  },
  "guides": [
@@ -2080,7 +2404,7 @@
    "今のガチャでいちばん価値が高いのは、爻光のモチーフ光円錐「彼女が視ると決めた時」か爻光の1凸（12/2まで）。緋英編成がそのまま強くなる。",
    "銀狼Lv999と火花は見送り。緋英と同じ愉悦アタッカーで爻光・アッハを取り合い、どちらも未所持のパールが前提になる。",
    "無料交換（黄泉・飲月・景元）は飲月。千刃がいなくて花火がいる手持ちに当てはまる。",
-   "パールが復刻したら最優先。アサギは緋英編成で「代用が効かない」としている。Ver4.8はゼンゼロコラボなので、星玉は残しておく。"
+   "復刻したら取りたいのは、パール（愉悦）、ダリア（ホタル編成）、千刃（黄泉編成）、緋英のモチーフと2凸。どれも次の開催時期は出ていない。Ver4.8はゼンゼロコラボなので、星玉は残しておく。"
   ],
   "groups": [
    {
@@ -2109,10 +2433,13 @@
     ]
    },
    {
-    "label": "今は開催なし",
+    "label": "復刻したら取りたい（今は開催なし）",
     "period": "復刻待ち",
     "picks": [
-     "パール"
+     "パール",
+     "ダリア",
+     "千冶・刃",
+     "緋英"
     ]
    }
   ],
@@ -2560,6 +2887,175 @@
       "label": "アサギゲームズ アッハ最強パーティー編成",
       "url": "https://www.youtube.com/watch?v=ZzO2212M2B8",
       "age": "当日の動画",
+      "trust": "高"
+     }
+    ]
+   },
+   {
+    "name": "ダリア",
+    "kind": "復刻待ち",
+    "element": null,
+    "own": "未所持",
+    "verdict": "ホタル編成を使うなら最優先",
+    "level": "near",
+    "text": "超撃破編成のサポーター兼サブアタッカー。アサギは「ダリアの有無で余裕で倍以上の差がある。ホタルを使うなら絶対に確保」「2凸ホタル・ダリアなしより、無凸ホタル・ダリアありのほうが強い」としている。無凸・モチーフなしでもよい。",
+    "teams": [
+     {
+      "team": "ホタル",
+      "value": "高",
+      "text": "ルアン・メェイの枠がダリアに替わる。弱点撃破していない敵にも超撃破ダメージが入るようになり、初動の火力が大きく変わる。虚構・末日で3編成目として使える強さになる。"
+     }
+    ],
+    "cones": [
+     {
+      "name": "ダリアのモチーフ",
+      "tag": "モチーフ",
+      "note": "非常に強力。ホタルのモチーフより優先度が高い。1凸とモチーフならモチーフがおすすめ。"
+     },
+     {
+      "name": "サフェルのモチーフ／流離人のモチーフ",
+      "tag": "次点",
+      "note": "防御ダウンが重なるサフェルのモチーフが特に強め。"
+     },
+     {
+      "name": "決意は汗のように輝く",
+      "tag": "星4",
+      "own": true,
+      "note": "ペラが装備中。防御ダウンは1ターンしか続かない点に注意。"
+     }
+    ],
+    "relic": {
+     "set": "鉄騎4＋鋳煉宮（ホタルと同じ）",
+     "main": "靴 速度／縄 EP／胴・オーブ 自由",
+     "subs": "速度と撃破特効。絶対に達成したい数値はない",
+     "goal": "ホタルのお下がりの遺物でよい"
+    },
+    "sources": [
+     {
+      "label": "アサギゲームズ ホタル・ダリア最新育成解説",
+      "url": "https://www.youtube.com/watch?v=NTlvMv9e-vY",
+      "age": "6か月前の動画",
+      "trust": "高"
+     }
+    ]
+   },
+   {
+    "name": "千冶・刃",
+    "kind": "復刻待ち",
+    "element": null,
+    "own": "未所持",
+    "verdict": "黄泉編成を使うなら確保",
+    "level": "near",
+    "text": "汎用サポーター兼アタッカー。アサギは黄泉の相方として「完全に頭が2つくらい抜けている。黄泉を使いたい場合は絶対に確保」としている。今の黄泉編成（ペラ・椒丘）は「かなり厳しめ」という評価なので、黄泉2凸を活かすにはこのキャラが要る。Ver4.6で開催したばかり。",
+    "teams": [
+     {
+      "team": "黄泉",
+      "value": "高",
+      "text": "理想は黄泉・千刃・水着ロビン。ペラと椒丘の2枠が千刃とロビンに替わる。"
+     },
+     {
+      "team": "セイバー・記憶など",
+      "value": "中",
+      "text": "水着ロビンは1人しかいないので、3編成が要る高難度で2人目の汎用サポーターとして使える。"
+     }
+    ],
+    "cones": [
+     {
+      "name": "千刃のモチーフ",
+      "tag": "モチーフ",
+      "note": "千刃自身の火力が上がる。初動が安定する以外は優先度が低め。"
+     },
+     {
+      "name": "サフェルのモチーフ",
+      "tag": "同程度",
+      "note": "黄泉編成のように他キャラが火力を出す編成では、こちらがかなり優秀。"
+     },
+     {
+      "name": "決意は汗のように輝く",
+      "tag": "星4",
+      "own": true,
+      "note": "ペラが装備中"
+     },
+     {
+      "name": "初めてのクエストの前に",
+      "tag": "星4"
+     }
+    ],
+    "relic": {
+     "set": "サポート運用なら鷹4もあり",
+     "main": "胴 会心率／靴 速度（1凸以上や長期戦ならHP%）／縄 HP%かEP／オーブ 与ダメかHP%",
+     "subs": "速度（140目標）＞ 会心率（80%まで）＞ 効果命中（必要なら）＞ HP%・会心ダメ",
+     "goal": "モチーフ：HP6952・会心率80%・会心ダメ79%・速度141.2"
+    },
+    "sources": [
+     {
+      "label": "アサギゲームズ パールと千刃どうする？",
+      "url": "https://www.youtube.com/watch?v=btBkbiC2p9w",
+      "age": "5日前の動画",
+      "trust": "高"
+     },
+     {
+      "label": "アサギゲームズ 千冶・刃の完全育成解説",
+      "url": "https://www.youtube.com/watch?v=vQ2kVLHg-fQ",
+      "age": "5か月前の動画",
+      "trust": "高"
+     }
+    ]
+   },
+   {
+    "name": "緋英",
+    "kind": "復刻待ち",
+    "element": "physical",
+    "own": "所持（1凸・モチーフなし）",
+    "verdict": "モチーフか2凸",
+    "level": "near",
+    "text": "本体は1凸で所持。アサギは緋英編成で「緋英の1凸と2凸、アッハの2凸、パールの2凸はどれも超強い」「1凸分しか投資できないなら爻光の1凸か緋英モチーフ」としている。復刻が終わったばかりで、次の時期は不透明。",
+    "teams": [
+     {
+      "team": "愉悦",
+      "value": "高",
+      "text": "主力の火力がそのまま上がる。2凸まで進めるとアッハの相方としての爻光の価値もさらに上がる。"
+     }
+    ],
+    "cones": [
+     {
+      "name": "緋英のモチーフ",
+      "tag": "モチーフ",
+      "note": "頭一つ抜ける。"
+     },
+     {
+      "name": "今日は好運",
+      "tag": "星4",
+      "own": true,
+      "note": "今の装備（重畳5）。星4の最上位グループ。"
+     },
+     {
+      "name": "タケタケ冒険記",
+      "tag": "星4",
+      "own": true
+     },
+     {
+      "name": "バカンスのひととき",
+      "tag": "星4"
+     }
+    ],
+    "relic": {
+     "set": "魔法少女4＋パンクロード（今の装備と同じ）",
+     "main": "胴 会心ダメ／靴 攻撃%か防御%／オーブ 属性ダメ／縄 EP",
+     "subs": "会心率（戦闘中100%）＞ 会心ダメ。攻撃力は愉悦ダメージに関係しない",
+     "goal": "会心率70%・会心ダメ200.8%。今は65.7%・227.3%"
+    },
+    "sources": [
+     {
+      "label": "アサギゲームズ アッハ最強パーティー編成",
+      "url": "https://www.youtube.com/watch?v=ZzO2212M2B8",
+      "age": "当日の動画",
+      "trust": "高"
+     },
+     {
+      "label": "アサギゲームズ 緋英最新育成解説",
+      "url": "https://www.youtube.com/watch?v=zPWoYPV1Zmc",
+      "age": "1か月前の動画",
       "trust": "高"
      }
     ]
