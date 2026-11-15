@@ -150,6 +150,35 @@ dl.gear dd{margin:0;min-width:0;overflow-wrap:anywhere}
 .gmem .tname{font-size:.72rem;font-weight:700;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .gtext{margin:0;font-size:.9rem}
 
+/* ガチャ */
+.sumlist{margin:0;padding-left:1.2em;font-size:.9rem;display:flex;flex-direction:column;gap:6px}
+.grhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;border-top:1px solid var(--line);padding-top:10px}
+.grname{font-weight:800;font-size:.85rem}
+.grper{font-size:.78rem;color:var(--muted)}
+.prow{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:10px;width:100%;text-align:left;border:0;background:none;color:var(--ink);padding:2px 0;cursor:pointer;font:inherit}
+.prow .who{display:block;font-weight:800}
+.prow .what{display:block;font-size:.78rem;color:var(--muted)}
+.pv{flex:none;font-size:.75rem;font-weight:800;border-radius:999px;padding:2px 10px;background:var(--track);color:var(--muted);text-align:center;max-width:9.5em}
+.pv.ok{background:var(--ok-soft);color:var(--ok)} .pv.near{background:var(--near-soft);color:var(--near)} .pv.far{background:var(--ng-soft);color:var(--ng)}
+.verdict{margin:0;font-weight:800;font-size:1.05rem}
+.verdict.ok{color:var(--ok)} .verdict.near{color:var(--near)} .verdict.far{color:var(--ng)}
+.gsec{border-top:1px solid var(--line);padding-top:10px;display:flex;flex-direction:column;gap:8px}
+.gsec h3{margin:0;font-size:.8rem;color:var(--muted);font-weight:700}
+.gsec.srcs{gap:4px}
+.vhead{display:flex;align-items:center;gap:8px}
+.vteam{font-weight:800;font-size:.9rem}
+.vval{font-size:.72rem;font-weight:800;border-radius:4px;padding:0 6px}
+.v-hi{background:var(--ok-soft);color:var(--ok)} .v-mid{background:var(--near-soft);color:var(--near)} .v-lo{background:var(--track);color:var(--muted)}
+.vtext{margin:2px 0 0;font-size:.85rem;color:var(--muted)}
+.conelist{margin:0;padding-left:1.4em;display:flex;flex-direction:column;gap:8px}
+.conetop{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
+.conename{font-weight:700;font-size:.92rem}
+.conetop .lbl{margin-right:0}
+.ownmark{font-size:.68rem;font-weight:800;color:var(--ok);background:var(--ok-soft);border-radius:3px;padding:0 5px}
+.crow{border-top:1px solid var(--line);padding-top:10px}
+.crow:first-of-type{border-top:0;padding-top:0}
+dl.gear.flat{border-top:0;padding-top:0}
+
 /* やること */
 .todo{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:grid;grid-template-columns:auto auto 1fr;gap:4px 12px;align-items:start;cursor:pointer}
 .todo input{width:22px;height:22px;margin:7px 0 0;accent-color:var(--ok-fill)}

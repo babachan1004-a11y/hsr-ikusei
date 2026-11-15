@@ -62,9 +62,11 @@
     var tabs = $('tabs'); tabs.textContent = '';
     var names = (S.data.teams || []).map(function (t) { return t.name; });
     var hasGuide = (S.data.guides || []).length > 0;
-    if (S.tab !== 'todo' && S.tab !== 'all' && !(S.tab === 'guide' && hasGuide) && names.indexOf(S.tab) < 0) S.tab = 'all';
+    var hasGacha = !!(S.data.gacha && (S.data.gacha.picks || []).length);
+    if (S.tab !== 'todo' && S.tab !== 'all' && !(S.tab === 'guide' && hasGuide) && !(S.tab === 'gacha' && hasGacha) && names.indexOf(S.tab) < 0) S.tab = 'all';
     tabs.appendChild(tabButton('全体', 'all', null));
     if (hasGuide) tabs.appendChild(tabButton('攻略', 'guide', null));
+    if (hasGacha) tabs.appendChild(tabButton('ガチャ', 'gacha', null));
     (S.data.teams || []).forEach(function (t) { var s = teamStat(t); tabs.appendChild(tabButton(t.name, t.name, s.miss ? '未達' + s.miss : '達成', s.miss ? 'far' : 'ok')); });
     var open = todos().filter(function (t) { return !t.done; }).length;
     tabs.appendChild(tabButton('やること', 'todo', String(open), open ? 'far' : 'ok'));
@@ -223,6 +225,87 @@
     }
   }
 
+  // ---- ガチャ ----
+  function srcRows(box, list) {
+    (list || []).forEach(function (s) {
+      var row = el('div', 'src plain'); row.appendChild(el('span', 'trust' + (s.trust === '高' ? ' hi' : ''), '信頼度 ' + (s.trust || '—')));
+      var a = el('a', null, s.label); a.href = s.url; a.target = '_blank'; a.rel = 'noopener'; row.appendChild(a);
+      if (s.age) row.appendChild(el('span', null, s.age)); box.appendChild(row);
+    });
+  }
+  function renderPick(p) {
+    var by = charBy(), c = by[p.name] || { element: p.element };
+    var card = el('section', 'card char ' + (p.level || 'none')); card.id = 'g-' + p.name;
+    var head = el('div', 'charhead'); head.appendChild(avatar(p.name, c, 'lg'));
+    var ht = el('div', 'chartitle'); ht.appendChild(el('h2', null, p.name));
+    var chips = el('div', 'chips'); if (p.kind) chips.appendChild(el('span', 'role', p.kind)); if (p.own) chips.appendChild(el('span', 'elem', p.own)); ht.appendChild(chips); head.appendChild(ht);
+    card.appendChild(head);
+    if (p.verdict) card.appendChild(el('p', 'verdict ' + (p.level || 'none'), p.verdict));
+    if (p.text) card.appendChild(el('p', 'gtext', p.text));
+    if ((p.teams || []).length) {
+      var tb = el('div', 'gsec'); tb.appendChild(el('h3', null, 'どの編成で価値が高いか'));
+      p.teams.forEach(function (t) {
+        var r = el('div', 'vrow'); var l = el('div', 'vhead'); l.appendChild(el('span', 'vteam', t.team));
+        l.appendChild(el('span', 'vval v-' + (t.value === '高' ? 'hi' : t.value === '中' ? 'mid' : 'lo'), '価値 ' + t.value)); r.appendChild(l);
+        r.appendChild(el('p', 'vtext', t.text)); tb.appendChild(r);
+      });
+      card.appendChild(tb);
+    }
+    if ((p.cones || []).length) {
+      var cb = el('div', 'gsec'); cb.appendChild(el('h3', null, 'おすすめ光円錐'));
+      var ol = el('ol', 'conelist');
+      p.cones.forEach(function (k) {
+        var li = el('li'); var top = el('div', 'conetop'); top.appendChild(el('span', 'conename', k.name));
+        if (k.tag) top.appendChild(el('span', 'lbl' + (k.tag === 'モチーフ' ? ' rec' : ''), k.tag));
+        if (k.own) top.appendChild(el('span', 'ownmark', '所持')); li.appendChild(top);
+        if (k.note) li.appendChild(el('p', 'vtext', k.note)); ol.appendChild(li);
+      });
+      cb.appendChild(ol); card.appendChild(cb);
+    }
+    if (p.relic) {
+      var rb = el('div', 'gsec'); rb.appendChild(el('h3', null, '遺物厳選'));
+      var dl = el('dl', 'gear flat');
+      [['セット', p.relic.set], ['メイン', p.relic.main], ['サブ優先', p.relic.subs], ['目安', p.relic.goal]].forEach(function (x) { if (x[1]) { dl.appendChild(el('dt', null, x[0])); dl.appendChild(el('dd', null, x[1])); } });
+      rb.appendChild(dl); card.appendChild(rb);
+    }
+    if ((p.sources || []).length) { var sb = el('div', 'gsec srcs'); srcRows(sb, p.sources); card.appendChild(sb); }
+    return card;
+  }
+  function renderGacha(view) {
+    var g = S.data.gacha, pk = {}; (g.picks || []).forEach(function (p) { pk[p.name] = p; });
+    var by = charBy();
+    var hero = el('section', 'hero');
+    var hh = el('div', 'cardhead'); hh.appendChild(el('h2', null, '取得のおすすめ')); if (g.asof) hh.appendChild(el('span', 'role', g.asof + ' 時点')); hero.appendChild(hh);
+    var ul = el('ul', 'sumlist'); (g.summary || []).forEach(function (s) { ul.appendChild(el('li', null, s)); }); hero.appendChild(ul);
+    view.appendChild(hero);
+    // 一覧（タップでそのキャラへ）
+    var idx = el('section', 'card'); var ih = el('div', 'cardhead'); ih.appendChild(el('h2', null, 'キャラ')); idx.appendChild(ih);
+    (g.groups || []).forEach(function (gr) {
+      var gh = el('div', 'grhead'); gh.appendChild(el('span', 'grname', gr.label)); gh.appendChild(el('span', 'grper', gr.period)); idx.appendChild(gh);
+      (gr.picks || []).forEach(function (n) {
+        var p = pk[n]; if (!p) return;
+        var b = el('button', 'prow ' + (p.level || 'none')); b.type = 'button';
+        b.appendChild(avatar(n, by[n] || { element: p.element }, 'sm'));
+        var body = el('span', 'nextbody'); body.appendChild(el('span', 'who', n)); body.appendChild(el('span', 'what', p.own || '')); b.appendChild(body);
+        b.appendChild(el('span', 'pv ' + (p.level || 'none'), p.verdict || ''));
+        b.addEventListener('click', function () { var t = document.getElementById('g-' + n); if (t) t.scrollIntoView({ block: 'start', behavior: 'smooth' }); });
+        idx.appendChild(b);
+      });
+    });
+    view.appendChild(idx);
+    if ((g.cones || []).length) {
+      var cs = el('section', 'card'); var ch = el('div', 'cardhead'); ch.appendChild(el('h2', null, '光円錐')); cs.appendChild(ch);
+      g.cones.forEach(function (k) {
+        var r = el('div', 'crow'); var top = el('div', 'conetop'); top.appendChild(el('span', 'conename', k.name)); top.appendChild(el('span', 'pv ' + (k.level || 'none'), k.verdict || '')); r.appendChild(top);
+        r.appendChild(el('p', 'enemy', (k.who || '') + (k.period ? ' ・ ' + k.period : '')));
+        if (k.text) r.appendChild(el('p', 'vtext', k.text)); cs.appendChild(r);
+      });
+      view.appendChild(cs);
+    }
+    (g.groups || []).forEach(function (gr) { (gr.picks || []).forEach(function (n) { if (pk[n]) view.appendChild(renderPick(pk[n])); }); });
+    if (g.note) view.appendChild(el('p', 'legend', g.note));
+  }
+
   // ---- やること ----
   function renderTodos(view) {
     var items = todos().sort(function (a, b) { return (a.done - b.done) || (a.order - b.order); });
@@ -251,6 +334,7 @@
     if (S.tab === 'todo') { renderTodos(view); return; }
     if (S.tab === 'all') { renderOverview(view); return; }
     if (S.tab === 'guide') { renderGuides(view); return; }
+    if (S.tab === 'gacha') { renderGacha(view); return; }
     var team = (S.data.teams || []).filter(function (t) { return t.name === S.tab; })[0]; if (!team) return;
     renderTeam(view, team);
     if (S.jump) { var target = document.getElementById('c-' + S.jump); S.jump = null; if (target) target.scrollIntoView({ block: 'start' }); }
