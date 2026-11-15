@@ -29,7 +29,7 @@
   },
   {
    "name": "黄泉",
-   "note": "虚無枠はペラか椒丘。使うほうの光円錐をLv80にする。ロビンの必殺技は、他の味方が攻撃した後に黄泉へ。",
+   "note": "アサギの最新の編成表では、理想は水着ロビン＋千刃（未所持）。千刃がいないときの相方はヴェルト4凸・サフェル・銀狼2凸で、虚無2人の編成はかなり厳しめという評価。ロビンの必殺技は、他の味方が攻撃した後に黄泉へ。",
    "members": [
     {
      "char": "黄泉",
@@ -44,12 +44,12 @@
     {
      "char": "ペラ",
      "role": "虚無枠（候補）",
-     "policy": "アサギゲームズの目標は未調査。光円錐がLv70。"
+     "policy": "効果命中と速度は目安に届いている。使うなら光円錐をLv80に。"
     },
     {
      "char": "椒丘",
      "role": "虚無枠（候補）",
-     "policy": "アサギゲームズの目標は未調査。光円錐がLv60。"
+     "policy": "効果命中140%が最優先。届いたら速度。"
     },
     {
      "char": "ヒアンシー",
@@ -112,12 +112,12 @@
   },
   {
    "name": "キャストリス",
-   "note": "アサギゲームズが比較に使っている編成（長夜月・キュレネ・ヒアンシー）。キャストリスは詩人セットのため速度を95未満に保つ。",
+   "note": "アサギゲームズが比較に使っている編成（長夜月・キュレネ・ヒアンシー）。キャストリスは詩人セットのため速度を95未満に保つ（今は87）。",
    "members": [
     {
      "char": "キャストリス",
      "role": "主力",
-     "policy": "会心率を画面68%まで上げるのが最優先。速度は今95ちょうどの表示なので、ゲーム内で95未満かを確認する。"
+     "policy": "会心率を画面68%まで上げるのが最優先。速度は87で、詩人の条件（95未満）を満たしている。"
     },
     {
      "char": "長夜月",
@@ -133,6 +133,32 @@
      "char": "ヒアンシー",
      "role": "耐久",
      "policy": "愉悦・黄泉編成と兼用。"
+    }
+   ]
+  },
+  {
+   "name": "長夜月",
+   "note": "キャストリス抜きの記憶編成。アサギによると全員が全体バフ持ちで、キャストリス編成とほぼ同じ強さ。残り1枠はトリビーより記憶開拓者のほうが強い。開拓者のチャージ調整が要るぶん操作は難しめ。",
+   "members": [
+    {
+     "char": "長夜月",
+     "role": "主力",
+     "policy": "会心率は画面65%で足りる。残りは会心ダメとHP。この編成では長夜月の凸が特に効く。"
+    },
+    {
+     "char": "キュレネ",
+     "role": "サブ火力・サポート",
+     "policy": "この編成では全体の約25%がキュレネのダメージ。速度180が最優先、オーブは与ダメ。"
+    },
+    {
+     "char": "開拓者",
+     "role": "サポート（記憶）",
+     "policy": "今は愉悦の運命。使うときは記憶に切り替えて、光円錐と遺物を記憶用に付け替える。"
+    },
+    {
+     "char": "ヒアンシー",
+     "role": "耐久",
+     "policy": "キュレネ編成なので速度は184.6でよい。"
     }
    ]
   }
@@ -221,15 +247,16 @@
    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/478d0c98d516a5351ecd77fe47a4f143.png",
    "cone": {
     "now": "在るがままの我 Lv80 重畳1",
-    "note": "推奨のスライドは未取得",
-    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/77ffb88b99b5a879e7542468699e6a80.png"
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/77ffb88b99b5a879e7542468699e6a80.png",
+    "rec": "モチーフ「在るがままの我」が優秀（今の装備）。次点はセイバーのモチーフ、ファイノンのモチーフ、古より受け継がれる血"
    },
    "set": {
     "now": "学者4＋生命科学研究院",
-    "note": "推奨のスライドは未取得"
+    "rec": "学者が無難（今の装備）。天才は量子弱点でなくてもかなり強い。オーナメントは研究院"
    },
    "main": {
-    "now": "会心率／攻撃力%／雷属性ダメ／攻撃力%"
+    "now": "会心率／攻撃力%／雷属性ダメ／攻撃力%",
+    "rec": "胴は会心系／靴は攻撃／オーブは与ダメ／縄は攻撃"
    },
    "subs": "会心率100%を優先",
    "source": {
@@ -297,14 +324,13 @@
    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/2b8497b39c8e5f0e5a8ee56b30edfd81.png",
    "cone": {
     "now": "空の虹が消えぬように Lv80 重畳1",
-    "rec": "モチーフが第一候補",
-    "note": "今の光円錐がモチーフかどうかは未確認",
-    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/842029ecc5789f7cb4225593d5c72194.png"
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/842029ecc5789f7cb4225593d5c72194.png",
+    "rec": "モチーフ「立ち上がり高らかな歌を」が第一候補。次点はヘルタ交換の「尽きぬ追憶」",
+    "note": "今の装備はヒアンシーのモチーフ。ロビン用としてはGame8で3番手グループ（HP確保用）"
    },
    "set": {
     "now": "救世主4＋オンパロス",
-    "rec": "トンネルはほぼ一択",
-    "note": "推奨セットの名前は未確認"
+    "rec": "トンネルは救世主がほぼ一択、オーナメントはオンパロス（今の装備と同じ）。記憶編成以外で使うならルサカも候補"
    },
    "main": {
     "now": "HP%／速度／HP%／EP回復効率",
@@ -547,20 +573,38 @@
    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/84905d87444d6ff4eb55e03b61817f24.png",
    "cone": {
     "now": "決意は汗のように輝く Lv70 重畳1",
-    "note": "使うならLv80に上げる",
-    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/d8c13347cdc408a277f9a9e30e795675.png"
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/d8c13347cdc408a277f9a9e30e795675.png",
+    "rec": "初めてのクエストの前に、または決意は汗のように輝く（今の装備）",
+    "note": "使うならLv80に上げる"
    },
    "set": {
-    "now": "司祭2＋メッセンジャー2＋伊須磨州"
+    "now": "司祭2＋メッセンジャー2＋伊須磨州",
+    "rec": "鷹4。オーナメントは竜骨か仙舟"
    },
    "main": {
-    "now": "効果命中／速度／防御力%／EP回復効率"
+    "now": "効果命中／速度／防御力%／EP回復効率",
+    "rec": "効果命中かHP／速度／HPか防御／EP"
    },
    "source": {
-    "label": "アサギゲームズの目標は未調査",
-    "trust": "—"
+    "label": "Game8 ペラの評価とビルド（アサギゲームズに解説動画なし）",
+    "url": "https://game8.jp/houkaistarrail/524683",
+    "trust": "中"
    },
-   "targets": [],
+   "targets": [
+    {
+     "item": "効果命中",
+     "target": 67,
+     "now": 83.4,
+     "unit": "%"
+    },
+    {
+     "item": "速度",
+     "target": 134,
+     "now": 136,
+     "unit": "",
+     "memo": "1ターンに2回動ける目安"
+    }
+   ],
    "relics": [
     {
      "slot": "頭",
@@ -592,7 +636,8 @@
      "main": "EP",
      "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/d18a82b4ca9934ea61e30df3b032bcfc.png"
     }
-   ]
+   ],
+   "subs": "効果命中（合計67%）≧ 速度（134以上）＞ 防御・HP"
   },
   {
    "name": "椒丘",
@@ -600,20 +645,42 @@
    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/11e31ad95913f66c799a8dbed6f93c3f.png",
    "cone": {
     "now": "獲物の視線 Lv60 重畳5",
-    "note": "使うならLv80に上げる",
-    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ef981e9645fe04b16af47922198ed36d.png"
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ef981e9645fe04b16af47922198ed36d.png",
+    "rec": "モチーフが圧倒的。星4は獲物の視線が無難（今の装備）",
+    "note": "使うならLv80に上げる"
    },
    "set": {
-    "now": "先駆者2＋司祭＋メッセンジャー＋カンパニー"
+    "now": "先駆者2＋司祭＋メッセンジャー＋カンパニー",
+    "rec": "メッセンジャーが無難。火力は先駆者。オーナメントは速度系（ウェンワークなど）"
    },
    "main": {
-    "now": "効果命中／速度／炎属性ダメ／EP回復効率"
+    "now": "効果命中／速度／炎属性ダメ／EP回復効率",
+    "rec": "効果命中／速度／与ダメ／EP"
    },
    "source": {
-    "label": "アサギゲームズの目標は未調査",
-    "trust": "—"
+    "label": "アサギゲームズ 椒丘ビルド・育成解説",
+    "url": "https://www.youtube.com/watch?v=0WQnNNZJU3Q",
+    "age": "2年前の動画",
+    "trust": "高"
    },
-   "targets": [],
+   "targets": [
+    {
+     "item": "効果命中",
+     "target": 140,
+     "now": 132.4,
+     "unit": "%",
+     "g8": "140%以上",
+     "memo": "140%で追加能力の攻撃力アップが最大"
+    },
+    {
+     "item": "速度",
+     "target": 160,
+     "now": 150,
+     "unit": "",
+     "g8": "160以上",
+     "memo": "アサギは数値を決めず「速いほどよい」"
+    }
+   ],
    "relics": [
     {
      "slot": "頭",
@@ -645,7 +712,8 @@
      "main": "EP",
      "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/27fede96c9ef00b148276b80431eea96.png"
     }
-   ]
+   ],
+   "subs": "効果命中140%までは最優先 ＞ 速度"
   },
   {
    "name": "アーチャー",
@@ -1191,7 +1259,8 @@
    "cone": {
     "now": "物語をめくって Lv80 重畳5",
     "rec": "モチーフが第一候補（超優秀）。他はヘルタ光円錐、物語をめくって",
-    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/3a5d543091a4e8e6ae54875c23a23ca7.png"
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/3a5d543091a4e8e6ae54875c23a23ca7.png",
+    "note": "モチーフ「空の虹が消えぬように」は今ロビンが装備中。アサギは「実装された光円錐の中でぶっちぎりで強い」と評価"
    },
    "set": {
     "now": "武神4＋神悟の樹庭",
@@ -1216,7 +1285,7 @@
      "now": 182,
      "unit": "",
      "g8": "200以上",
-     "memo": "キュレネ編成以外の目安"
+     "memo": "キュレネ編成（オンパロスあり）なら184.6でよい。モチーフ装備時の目安は203"
     },
     {
      "item": "HP",
@@ -1224,7 +1293,7 @@
      "now": 5064,
      "unit": "",
      "g8": "5000以上",
-     "memo": "星4光円錐S5の行（物語かは未確認）"
+     "memo": "「物語をめくって」重畳5の行"
     },
     {
      "item": "会心ダメージ",
@@ -1277,15 +1346,14 @@
     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/1bfe56d6738d0394a91558c3af44d80e.png"
    },
    "set": {
-    "now": "詩人4＋エイジリア",
-    "rec": "トンネルは詩人がほぼ一択",
-    "note": "推奨オーナメントの名前は未確認"
+    "now": "詩人4＋静謐な拾骨地",
+    "rec": "トンネルは詩人、オーナメントは静謐な拾骨地がほぼ一択（今の装備と同じ）"
    },
    "main": {
     "now": "会心ダメ／HP%／HP%／HP%",
     "rec": "胴は会心系、それ以外はHP%（オーブは与ダメでもよい）"
    },
-   "subs": "会心率（画面68%で戦闘中100%）＞ 会心ダメ・HP。速度は上げすぎると詩人の効果が下がる",
+   "subs": "会心率（画面68%で戦闘中100%）＞ 会心ダメ・HP。速度は95未満を保つ（今は87）",
    "source": {
     "label": "アサギゲームズ キャストリス最新育成解説",
     "url": "https://www.youtube.com/watch?v=Uwa3C4syZr8",
@@ -1356,9 +1424,8 @@
     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/f9a97bfd94541bd57d80667643f20bb9.png"
    },
    "set": {
-    "now": "救世主4＋エイジリア",
-    "rec": "トンネルは救世主一択",
-    "note": "推奨オーナメントの名前は未確認"
+    "now": "救世主4＋静謐な拾骨地",
+    "rec": "トンネルは救世主一択、オーナメントは静謐な拾骨地（今の装備と同じ）"
    },
    "main": {
     "now": "会心ダメ／HP%／HP%／HP%",
@@ -1438,9 +1505,8 @@
    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/e251cbaedd7380820fdf6e29f6d9cb0a.png",
    "cone": {
     "now": "尽きぬ追憶 Lv80 重畳5",
-    "rec": "モチーフが非常に強力",
-    "note": "今の光円錐の順位は未確認。目標はモチーフなしの行を採用",
-    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/4e82be4e5e0ef40225bff7c049c716ff.png"
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/4e82be4e5e0ef40225bff7c049c716ff.png",
+    "rec": "モチーフ「愛はいま永遠に」が非常に強力。次点はヘルタ交換の「尽きぬ追憶」（今の装備）"
    },
    "set": {
     "now": "救世主4＋オンパロス",
@@ -1463,7 +1529,7 @@
      "target": 182.2,
      "now": 167,
      "unit": "",
-     "memo": "まず180が最優先"
+     "memo": "まず180が最優先。「尽きぬ追憶」の行"
     },
     {
      "item": "HP",
@@ -1514,6 +1580,78 @@
      "slot": "縄",
      "main": "HP%",
      "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/a236112d3de1e400b58ea2401e000849.png"
+    }
+   ]
+  },
+  {
+   "name": "開拓者",
+   "element": "lightning",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ff5ba32ea2112bfd6d5256ab3275f153.png",
+   "cone": {
+    "now": "タケタケ冒険記 Lv80 重畳2（愉悦用）",
+    "rec": "キュレネのモチーフ、または開拓者専用の「ピンクの明日へ」（無料で重畳5にできる）",
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/4522fdc26c67d73f1a0b689e209c77e2.png"
+   },
+   "set": {
+    "now": "卜者4＋千星シティ（愉悦用）",
+    "rec": "トンネルは救世主。長夜月編成のオーナメントはピノコニー"
+   },
+   "main": {
+    "now": "会心率／速度／攻撃力%／攻撃力%",
+    "rec": "会心ダメ／速度／与ダメか攻撃%／EPか攻撃%"
+   },
+   "subs": "速度と会心ダメだけ見ればよい。速度は134か160",
+   "source": {
+    "label": "アサギゲームズ 記憶開拓者 最新解説",
+    "url": "https://www.youtube.com/watch?v=dihUBNGpwdg",
+    "age": "1年前の動画",
+    "trust": "高"
+   },
+   "targets": [
+    {
+     "item": "速度",
+     "target": 160,
+     "now": 165,
+     "unit": ""
+    },
+    {
+     "item": "会心ダメージ",
+     "target": 239.9,
+     "now": 75.6,
+     "unit": "%",
+     "memo": "「ピンクの明日へ」の行。今は愉悦用の装備の値"
+    }
+   ],
+   "relics": [
+    {
+     "slot": "頭",
+     "main": "HP",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/1d879fed4e91e27a28516f9455208322.png"
+    },
+    {
+     "slot": "手",
+     "main": "攻撃",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/a42d973db0e4d973da92249638e08e7b.png"
+    },
+    {
+     "slot": "胴",
+     "main": "会心率",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/3c513ff02dc35d9d5d00e5967660b6da.png"
+    },
+    {
+     "slot": "脚",
+     "main": "速度",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ea5e3ee974910940b3e22ffa87ebc49e.png"
+    },
+    {
+     "slot": "オーブ",
+     "main": "攻撃%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/cb8607c52cdf0ae9c3a86b7ff27085d0.png"
+    },
+    {
+     "slot": "縄",
+     "main": "攻撃%",
+     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/411218cb3709895494728469b0a463d1.png"
     }
    ]
   }
@@ -1612,7 +1750,7 @@
    "order": 10,
    "char": "ペラ／椒丘",
    "text": "黄泉編成で使うほうの光円錐をLv80にする",
-   "reason": "ペラはLv70、椒丘はLv60",
+   "reason": "ペラはLv70、椒丘はLv60。椒丘は効果命中もあと7.6%（目安140%）",
    "done": false
   },
   {
@@ -1646,6 +1784,22 @@
    "char": "長夜月",
    "text": "会心ダメージのサブステータスを伸ばす",
    "reason": "目安186.1%に対して今は175.4%。会心率・HP・速度はほぼ足りている"
+  },
+  {
+   "done": false,
+   "id": "t17",
+   "order": 0.5,
+   "char": "ヒアンシー",
+   "text": "モチーフ光円錐「空の虹が消えぬように」をロビンから戻す（ロビンには「物語をめくって」）",
+   "reason": "裏庭パート2で回復が間に合わない。ヒアンシーのモチーフはアサギ評価で飛び抜けて強く、ロビン側はGame8で「物語をめくって」も候補"
+  },
+  {
+   "done": false,
+   "id": "t18",
+   "order": 13,
+   "char": "開拓者",
+   "text": "長夜月編成で使うときは記憶に切り替え、救世主セットと記憶の光円錐を付ける",
+   "reason": "今は愉悦用の装備（卜者＋タケタケ冒険記）。記憶では会心ダメ239.9%・速度160が目安"
   }
  ]
 }
