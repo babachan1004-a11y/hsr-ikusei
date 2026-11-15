@@ -51,6 +51,10 @@
     if (has) p.appendChild(el('span', 'phit ' + hitLevel(r), r.hits + '/' + r.rolls));
     return p;
   }
+  function coneImg(src) {
+    var box = el('span', 'cimg'), img = el('img'); img.alt = ''; img.loading = 'lazy'; img.decoding = 'async'; img.referrerPolicy = 'no-referrer';
+    img.addEventListener('error', function () { box.remove(); }); img.src = src; box.appendChild(img); return box;
+  }
   // 厳選度：有効サブが伸びた回数の割合
   function hitRatio(r) { return r && typeof r.hits === 'number' && r.rolls > 0 ? r.hits / r.rolls : null; }
   function hitLevel(r) { var x = hitRatio(r); return x === null ? 'none' : x >= 0.6 ? 'ok' : x >= 0.4 ? 'near' : 'far'; }
@@ -343,7 +347,7 @@
     });
   }
   function renderPick(p) {
-    var by = charBy(), c = by[p.name] || { element: p.element };
+    var by = charBy(), c = by[p.name] || { element: p.element, icon: p.icon };
     var card = el('section', 'card char ' + (p.level || 'none')); card.id = 'g-' + p.name;
     var head = el('div', 'charhead'); head.appendChild(avatar(p.name, c, 'lg'));
     var ht = el('div', 'chartitle'); ht.appendChild(el('h2', null, p.name));
@@ -364,7 +368,7 @@
       var cb = el('div', 'gsec'); cb.appendChild(el('h3', null, 'おすすめ光円錐'));
       var ol = el('ol', 'conelist');
       p.cones.forEach(function (k) {
-        var li = el('li'); var top = el('div', 'conetop'); top.appendChild(el('span', 'conename', k.name));
+        var li = el('li'); var top = el('div', 'conetop'); if (k.icon) top.appendChild(coneImg(k.icon)); top.appendChild(el('span', 'conename', k.name));
         if (k.tag) top.appendChild(el('span', 'lbl' + (k.tag === 'モチーフ' ? ' rec' : ''), k.tag));
         if (k.own) top.appendChild(el('span', 'ownmark', '所持')); li.appendChild(top);
         if (k.note) li.appendChild(el('p', 'vtext', k.note)); ol.appendChild(li);
@@ -398,7 +402,7 @@
       (gr.picks || []).forEach(function (n) {
         var p = pk[n]; if (!p) return;
         var b = el('button', 'prow ' + (p.level || 'none') + (gone ? ' gone' : '')); b.type = 'button';
-        b.appendChild(avatar(n, by[n] || { element: p.element }, 'sm'));
+        b.appendChild(avatar(n, by[n] || { element: p.element, icon: p.icon }, 'sm'));
         var body = el('span', 'nextbody'); body.appendChild(el('span', 'who', n)); body.appendChild(el('span', 'what', p.own || '')); b.appendChild(body);
         b.appendChild(el('span', 'pv ' + (p.level || 'none'), p.verdict || ''));
         b.addEventListener('click', function () { var t = document.getElementById('g-' + n); if (t) t.scrollIntoView({ block: 'start', behavior: 'smooth' }); });
@@ -410,7 +414,7 @@
       var cs = el('section', 'card'); var ch = el('div', 'cardhead'); ch.appendChild(el('h2', null, '光円錐')); cs.appendChild(ch);
       g.cones.forEach(function (k) {
         var kg = k.end && dayDiff(k.end) < 0;
-        var r = el('div', 'crow' + (kg ? ' gone' : '')); var top = el('div', 'conetop'); top.appendChild(el('span', 'conename', k.name)); top.appendChild(el('span', 'pv ' + (kg ? 'none' : (k.level || 'none')), kg ? '終了' : (k.verdict || ''))); r.appendChild(top);
+        var r = el('div', 'crow' + (kg ? ' gone' : '')); var top = el('div', 'conetop'); if (k.icon) top.appendChild(coneImg(k.icon)); top.appendChild(el('span', 'conename', k.name)); top.appendChild(el('span', 'pv ' + (kg ? 'none' : (k.level || 'none')), kg ? '終了' : (k.verdict || ''))); r.appendChild(top);
         r.appendChild(el('p', 'enemy', (k.who || '') + (k.period ? ' ・ ' + k.period : '')));
         if (k.text) r.appendChild(el('p', 'vtext', k.text)); cs.appendChild(r);
       });

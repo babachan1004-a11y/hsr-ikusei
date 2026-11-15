@@ -173,6 +173,9 @@ dl.gear dd{margin:0;min-width:0;overflow-wrap:anywhere}
 .conelist{margin:0;padding-left:1.4em;display:flex;flex-direction:column;gap:8px}
 .conetop{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
 .conename{font-weight:700;font-size:.92rem}
+.cimg{flex:none;width:36px;height:36px;border-radius:6px;background:var(--track);border:1px solid var(--line);overflow:hidden;display:inline-block}
+.cimg img{width:100%;height:100%;object-fit:cover;display:block}
+.conelist{padding-left:0;list-style:none}
 .conetop .lbl{margin-right:0}
 .ownmark{font-size:.68rem;font-weight:800;color:var(--ok);background:var(--ok-soft);border-radius:3px;padding:0 5px}
 .crow{border-top:1px solid var(--line);padding-top:10px}

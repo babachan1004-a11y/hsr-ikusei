@@ -2936,7 +2936,7 @@
    "今のガチャでいちばん価値が高いのは、爻光のモチーフ光円錐「彼女が視ると決めた時」か爻光の1凸（12/2まで）。緋英編成がそのまま強くなる。",
    "銀狼Lv999と火花は見送り。緋英と同じ愉悦アタッカーで爻光・アッハを取り合い、どちらも未所持のパールが前提になる。",
    "無料交換（黄泉・飲月・景元）は飲月。千刃がいなくて花火がいる手持ちに当てはまる。",
-   "復刻したら取りたいのは、パール（愉悦）、ダリア（ホタル編成）、千刃（黄泉編成）、緋英のモチーフと2凸。どれも次の開催時期は出ていない。Ver4.8はゼンゼロコラボなので、星玉は残しておく。"
+   "復刻したら取りたいのは、パール（愉悦）、ダリア（ホタル編成）、千刃（黄泉編成）、緋英のモチーフ「再び花が咲く季節に」と2凸。どれも次の開催時期は出ていない。Ver4.8はゼンゼロコラボなので、星玉は残しておく。"
   ],
   "groups": [
    {
@@ -3000,18 +3000,21 @@
       "name": "はじめの「アッハ」が響く時",
       "tag": "モチーフ",
       "own": true,
-      "note": "今の装備。アサギは「上振れると強いが後回しでよい」としており、持っているなら十分。"
+      "note": "今の装備。アサギは「上振れると強いが後回しでよい」としており、持っているなら十分。",
+      "icon": "https://act-webstatic.hoyoverse.com/event-static-hoyowiki-admin/2026/11/03/8819368bcfeca86786bcd5522ce44cdb_1799013675642758596.png"
      },
      {
       "name": "再び花が咲く季節に",
       "tag": "代用",
-      "note": "限定の光円錐"
+      "note": "緋英のモチーフ（限定）。緋英が使うので、アッハ用には取らない。",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/05/13/127094529/daa221c7ca8cd3252d8a86243f5dd087_1430177180192910310.png"
      },
      {
       "name": "タケタケ冒険記",
       "tag": "代用",
       "own": true,
-      "note": "無料で重畳5にできる。爻光と開拓者が装備中。"
+      "note": "無料で重畳5にできる。爻光と開拓者が装備中。",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/02/18/127094529/99a2dec9645afe6eb5a94c36528bdf94_3740306225028387865.png"
      }
     ],
     "relic": {
@@ -3059,18 +3062,21 @@
      {
       "name": "彼女が視ると決めた時",
       "tag": "モチーフ",
-      "note": "第一候補。速度アップとEP回復で必殺技が増える。戦闘中に会心率も上がるので、緋英の会心率の目安（今70%）を下げられる。愉悦開拓者などにも使い回せる。"
+      "note": "第一候補。速度アップとEP回復で必殺技が増える。戦闘中に会心率も上がるので、緋英の会心率の目安（今70%）を下げられる。愉悦開拓者などにも使い回せる。",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/02/17/127094529/c3e0ac04207ee26a205b0bfdd888818b_6196319217094058201.png"
      },
      {
       "name": "タケタケ冒険記",
       "tag": "第二",
       "own": true,
-      "note": "今の装備（重畳5）。アサギは「モチーフがない場合は基本的にこれ」としている。"
+      "note": "今の装備（重畳5）。アサギは「モチーフがない場合は基本的にこれ」としている。",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/02/18/127094529/99a2dec9645afe6eb5a94c36528bdf94_3740306225028387865.png"
      },
      {
-      "name": "緋英のモチーフ",
+      "name": "再び花が咲く季節に",
       "tag": "銀狼編成なら",
-      "note": "銀狼編成で使う場合の候補。同じ光円錐を2枚装備しても効果は重ならないので、緋英編成では向かない。"
+      "note": "緋英のモチーフ。銀狼編成で使う場合の候補。同じ光円錐を2枚装備しても効果は重ならないので、緋英編成では向かない。",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/05/13/127094529/daa221c7ca8cd3252d8a86243f5dd087_1430177180192910310.png"
      }
     ],
     "relic": {
@@ -3113,32 +3119,38 @@
      {
       "name": "銀河シティへようこそ",
       "tag": "モチーフ",
-      "note": "いちばんのおすすめ。速度200を達成しやすくなる。"
+      "note": "いちばんのおすすめ。速度200を達成しやすくなる。",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/04/22/127094529/acee19636395578bff37d1e9b5664036_7436684537659243515.png"
      },
      {
       "name": "再び花が咲く季節に",
       "tag": "次点",
-      "note": "限定の光円錐"
+      "note": "緋英のモチーフ（限定）",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/05/13/127094529/daa221c7ca8cd3252d8a86243f5dd087_1430177180192910310.png"
      },
      {
       "name": "今日は好運",
       "tag": "星4でトップ",
       "own": true,
-      "note": "緋英が装備中（重畳5）"
+      "note": "緋英が装備中（重畳5）",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/02/18/127094529/ba9f53373cd16865591b251b3668da3e_4152318062894306135.png"
      },
      {
       "name": "バカンスのひと時",
-      "tag": "星4の代用"
+      "tag": "星4の代用",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/09/30/127094529/a63546a2a3e4e319b6d2a3b76feddd96_3041370107956285140.png"
      },
      {
       "name": "タケタケ冒険記",
       "tag": "星4の代用",
-      "own": true
+      "own": true,
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/02/18/127094529/99a2dec9645afe6eb5a94c36528bdf94_3740306225028387865.png"
      },
      {
       "name": "彼女が視ると決めた時",
       "tag": "余っているなら",
-      "note": "爻光のモチーフ"
+      "note": "爻光のモチーフ",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/02/17/127094529/c3e0ac04207ee26a205b0bfdd888818b_6196319217094058201.png"
      }
     ],
     "relic": {
@@ -3160,7 +3172,8 @@
       "age": "5日前の動画",
       "trust": "高"
      }
-    ]
+    ],
+    "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/04/22/127094529/fe2943d5ec89d9774d9c8d4f891c2b8e_9010179442405192643.png"
    },
    {
     "name": "火花",
@@ -3181,19 +3194,22 @@
      {
       "name": "きらびやかな世界",
       "tag": "モチーフ",
-      "note": "第一候補。ただし伸びはそこまで大きくなく、タケタケ冒険記でも十分代用できる（アサギ）。"
+      "note": "第一候補。ただし伸びはそこまで大きくなく、タケタケ冒険記でも十分代用できる（アサギ）。",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/03/14/127094529/c84118492addd4cdb1529a8416c4ccca_4485599861109762650.png"
      },
      {
       "name": "タケタケ冒険記",
       "tag": "第二",
       "own": true,
-      "note": "「意外と強い」"
+      "note": "「意外と強い」",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/02/18/127094529/99a2dec9645afe6eb5a94c36528bdf94_3740306225028387865.png"
      },
      {
       "name": "今日は好運",
       "tag": "次点（Game8）",
       "own": true,
-      "note": "Game8はモチーフの代用としてこれを挙げている。"
+      "note": "Game8はモチーフの代用としてこれを挙げている。",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/02/18/127094529/ba9f53373cd16865591b251b3668da3e_4152318062894306135.png"
      }
     ],
     "relic": {
@@ -3220,7 +3236,8 @@
       "url": "https://game8.jp/houkaistarrail/754095",
       "trust": "中"
      }
-    ]
+    ],
+    "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/03/02/127094529/ee8f8967ca7f156547da8dca56686fb7_8969797006837503960.png"
    },
    {
     "name": "飲月",
@@ -3241,23 +3258,27 @@
      {
       "name": "陽光より輝くもの",
       "tag": "モチーフ",
-      "note": "会心率とEP効率を稼げる（Game8）。"
+      "note": "会心率とEP効率を稼げる（Game8）。",
+      "icon": "https://upload-static.hoyoverse.com/hoyolab-wiki/2023/08/22/59155606/e0aaee96d8273ac82faead308ab5abc8_1426472270354482219.png"
      },
      {
       "name": "とある星神の殞落を記す",
       "tag": "代用",
       "own": true,
-      "note": "ヘルタ交換の光円錐。重畳5を所持（今はホタルが装備）。まずはこれで足りる。"
+      "note": "ヘルタ交換の光円錐。重畳5を所持（今はホタルが装備）。まずはこれで足りる。",
+      "icon": "https://upload-static.hoyoverse.com/hoyowiki/2023/02/21/2908b86aeaca11fb174c20f2dd24d5d5_4824814422205447232.png"
      },
      {
       "name": "青空の下で",
       "tag": "代用",
       "own": true,
-      "note": "クラーラが装備中"
+      "note": "クラーラが装備中",
+      "icon": "https://upload-static.hoyoverse.com/hoyolab-wiki/2023/05/04/215921855/d4a42501230b325d28772affbcc16cad_2469441620793027525.png"
      },
      {
       "name": "かけがえのないもの",
-      "tag": "代用"
+      "tag": "代用",
+      "icon": "https://upload-static.hoyoverse.com/hoyowiki/2023/02/21/e29a90c94a312c8c3630484be112281f_1321403954333962126.png"
      }
     ],
     "relic": {
@@ -3278,7 +3299,8 @@
       "url": "https://game8.jp/houkaistarrail/539586",
       "trust": "中"
      }
-    ]
+    ],
+    "icon": "https://upload-static.hoyoverse.com/hoyolab-wiki/2023/08/29/13436800/8f0c086968f504bde0b12d6b94b4622c_6598005406080969204.png"
    },
    {
     "name": "黄泉",
@@ -3300,15 +3322,19 @@
       "name": "流れ逝く岸を歩いて",
       "tag": "モチーフ",
       "own": true,
-      "note": "今の装備。無難（以前より価値は下がった）。"
+      "note": "今の装備。無難（以前より価値は下がった）。",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2024/03/21/127094529/8707622cabd577ddf02a0fd00fbd6fd1_4512400129843468543.png"
      },
      {
       "name": "風に揺蕩う虚言",
-      "tag": "代用"
+      "tag": "代用",
+      "note": "サフェルのモチーフ",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2025/06/11/127094529/0d5ce8d63f2ca7191944223d3f70a730_738760466204152901.png"
      },
      {
       "name": "終わりなき舞踏",
-      "tag": "代用"
+      "tag": "代用",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2024/04/30/127094529/44f9594b48145cfb4cbc3b3f08b28241_8992891421190360625.png"
      }
     ],
     "relic": {
@@ -3351,23 +3377,27 @@
      {
       "name": "夜明け前",
       "tag": "モチーフ",
-      "note": "知恵の光円錐の中でも屈指（Game8）。"
+      "note": "知恵の光円錐の中でも屈指（Game8）。",
+      "icon": "https://upload-static.hoyoverse.com/hoyowiki/2023/02/21/ac79e739072fa86b2f6d5f851bb2c916_952669953280599733.png"
      },
      {
       "name": "「私」の誕生",
       "tag": "代用",
-      "note": "ガチャ産の星4。追加攻撃を重視するなら。"
+      "note": "ガチャ産の星4。追加攻撃を重視するなら。",
+      "icon": "https://upload-static.hoyoverse.com/hoyowiki/2023/02/21/78bdd2715945e3f1e87dc677d50f481e_7231314384566776724.png"
      },
      {
       "name": "今日も平和な一日",
       "tag": "代用",
-      "note": "ナナシの勲功で入手。"
+      "note": "ナナシの勲功で入手。",
+      "icon": "https://upload-static.hoyoverse.com/hoyowiki/2023/02/21/2170522acf2fc7e6a657b0f26a81f7b0_8571278187657403042.png"
      },
      {
       "name": "朝食の儀式感",
       "tag": "代用",
       "own": true,
-      "note": "青雀が装備中"
+      "note": "青雀が装備中",
+      "icon": "https://upload-static.hoyoverse.com/hoyowiki/2023/02/21/e00975de10154b3fe32fc2c309a0fc08_1117849229478748330.png"
      }
     ],
     "relic": {
@@ -3388,7 +3418,8 @@
       "url": "https://game8.jp/houkaistarrail/524677",
       "trust": "中"
      }
-    ]
+    ],
+    "icon": "https://upload-static.hoyoverse.com/hoyowiki/2023/02/21/df37aacd31ab40efdcb16ef03a5b68ed_4983283866355038276.png"
    },
    {
     "name": "パール",
@@ -3407,9 +3438,10 @@
     ],
     "cones": [
      {
-      "name": "パールのモチーフ",
+      "name": "明日に捧げる色",
       "tag": "モチーフ",
-      "note": "耐久が上がりEP回復も付く。アサギは「1凸かモチーフかなら基本はモチーフ」。ただし無凸・モチーフなしの確保がまず先。"
+      "note": "耐久が上がりEP回復も付く。アサギは「1凸かモチーフかなら基本はモチーフ」。ただし無凸・モチーフなしの確保がまず先。",
+      "icon": "https://act-webstatic.hoyoverse.com/event-static-hoyowiki-admin/2026/09/24/c36e3ad6df5f2ff6f05f97f0a84bb57f_2001189491613333381.png"
      }
     ],
     "sources": [
@@ -3425,7 +3457,8 @@
       "age": "当日の動画",
       "trust": "高"
      }
-    ]
+    ],
+    "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/09/30/127094529/6d8ea7dccd66194d6088769e539db054_5481322088848048458.png"
    },
    {
     "name": "ダリア",
@@ -3444,20 +3477,29 @@
     ],
     "cones": [
      {
-      "name": "ダリアのモチーフ",
+      "name": "彼女の炎を忘れずに",
       "tag": "モチーフ",
-      "note": "非常に強力。ホタルのモチーフより優先度が高い。1凸とモチーフならモチーフがおすすめ。"
+      "note": "非常に強力。ホタルのモチーフより優先度が高い。1凸とモチーフならモチーフがおすすめ。",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2025/12/17/127094529/7b3da1c62718fd9c8da3a5907024cb23_244526362924460706.png"
      },
      {
-      "name": "サフェルのモチーフ／流離人のモチーフ",
+      "name": "風に揺蕩う虚言",
       "tag": "次点",
-      "note": "防御ダウンが重なるサフェルのモチーフが特に強め。"
+      "note": "サフェルのモチーフ。防御ダウンが重なるので特に強め。",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2025/06/11/127094529/0d5ce8d63f2ca7191944223d3f70a730_738760466204152901.png"
+     },
+     {
+      "name": "長途はやがて帰途へと続く",
+      "tag": "次点",
+      "note": "帰忘の流離人のモチーフ",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2024/12/21/127094529/ab792bee4c7a2f4683bab449bb259bb6_7472677657019860143.png"
      },
      {
       "name": "決意は汗のように輝く",
       "tag": "星4",
       "own": true,
-      "note": "ペラが装備中。防御ダウンは1ターンしか続かない点に注意。"
+      "note": "ペラが装備中。防御ダウンは1ターンしか続かない点に注意。",
+      "icon": "https://upload-static.hoyoverse.com/hoyolab-wiki/2023/05/04/215921855/2e50faa47bb9477dd844966d41b28d66_8925271009886394742.png"
      }
     ],
     "relic": {
@@ -3473,7 +3515,8 @@
       "age": "6か月前の動画",
       "trust": "高"
      }
-    ]
+    ],
+    "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2025/12/15/127094529/38d2c22623444abf51898715f0290ca5_9190977979901906422.png"
    },
    {
     "name": "千冶・刃",
@@ -3497,24 +3540,28 @@
     ],
     "cones": [
      {
-      "name": "千刃のモチーフ",
+      "name": "煉獄に焼かれし新身",
       "tag": "モチーフ",
-      "note": "千刃自身の火力が上がる。初動が安定する以外は優先度が低め。"
+      "note": "千刃自身の火力が上がる。初動が安定する以外は優先度が低め。",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/06/17/127094529/260215a1a1b9d0867e3df1e00b51ea6a_1884667747438340206.png"
      },
      {
-      "name": "サフェルのモチーフ",
+      "name": "風に揺蕩う虚言",
       "tag": "同程度",
-      "note": "黄泉編成のように他キャラが火力を出す編成では、こちらがかなり優秀。"
+      "note": "サフェルのモチーフ。黄泉編成のように他キャラが火力を出す編成では、こちらがかなり優秀。",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2025/06/11/127094529/0d5ce8d63f2ca7191944223d3f70a730_738760466204152901.png"
      },
      {
       "name": "決意は汗のように輝く",
       "tag": "星4",
       "own": true,
-      "note": "ペラが装備中"
+      "note": "ペラが装備中",
+      "icon": "https://upload-static.hoyoverse.com/hoyolab-wiki/2023/05/04/215921855/2e50faa47bb9477dd844966d41b28d66_8925271009886394742.png"
      },
      {
       "name": "初めてのクエストの前に",
-      "tag": "星4"
+      "tag": "星4",
+      "icon": "https://upload-static.hoyoverse.com/hoyolab-wiki/2023/05/27/13436800/7624d4c80658642109c1677e74e97499_855369950449832990.png"
      }
     ],
     "relic": {
@@ -3536,7 +3583,8 @@
       "age": "5か月前の動画",
       "trust": "高"
      }
-    ]
+    ],
+    "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/05/31/127094529/4c00fe191686ee721b9e0dcffc8a764b_122856072206430163.png"
    },
    {
     "name": "緋英",
@@ -3555,24 +3603,28 @@
     ],
     "cones": [
      {
-      "name": "緋英のモチーフ",
+      "name": "再び花が咲く季節に",
       "tag": "モチーフ",
-      "note": "頭一つ抜ける。"
+      "note": "頭一つ抜ける。",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/05/13/127094529/daa221c7ca8cd3252d8a86243f5dd087_1430177180192910310.png"
      },
      {
       "name": "今日は好運",
       "tag": "星4",
       "own": true,
-      "note": "今の装備（重畳5）。星4の最上位グループ。"
+      "note": "今の装備（重畳5）。星4の最上位グループ。",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/02/18/127094529/ba9f53373cd16865591b251b3668da3e_4152318062894306135.png"
      },
      {
       "name": "タケタケ冒険記",
       "tag": "星4",
-      "own": true
+      "own": true,
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/02/18/127094529/99a2dec9645afe6eb5a94c36528bdf94_3740306225028387865.png"
      },
      {
-      "name": "バカンスのひととき",
-      "tag": "星4"
+      "name": "バカンスのひと時",
+      "tag": "星4",
+      "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/09/30/127094529/a63546a2a3e4e319b6d2a3b76feddd96_3041370107956285140.png"
      }
     ],
     "relic": {
@@ -3605,7 +3657,8 @@
     "verdict": "狙う",
     "level": "near",
     "text": "今のガチャで取る価値がいちばん高い光円錐。爻光の速度とEPが伸び、緋英の会心率の目安も下がる。",
-    "end": "2026-12-02"
+    "end": "2026-12-02",
+    "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/02/17/127094529/c3e0ac04207ee26a205b0bfdd888818b_6196319217094058201.png"
    },
    {
     "name": "はじめの「アッハ」が響く時",
@@ -3614,7 +3667,8 @@
     "verdict": "所持済み",
     "level": "ok",
     "text": "重ねる必要はない。",
-    "end": "2026-12-22"
+    "end": "2026-12-22",
+    "icon": "https://act-webstatic.hoyoverse.com/event-static-hoyowiki-admin/2026/11/03/8819368bcfeca86786bcd5522ce44cdb_1799013675642758596.png"
    },
    {
     "name": "銀河シティへようこそ",
@@ -3623,7 +3677,8 @@
     "verdict": "見送り",
     "level": "far",
     "text": "銀狼を取らないので不要。",
-    "end": "2026-12-02"
+    "end": "2026-12-02",
+    "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/04/22/127094529/acee19636395578bff37d1e9b5664036_7436684537659243515.png"
    },
    {
     "name": "きらびやかな世界",
@@ -3632,7 +3687,8 @@
     "verdict": "見送り",
     "level": "far",
     "text": "火花を取らないので不要。火花本人でもタケタケ冒険記で代用できる程度の差。",
-    "end": "2026-12-02"
+    "end": "2026-12-02",
+    "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/03/14/127094529/c84118492addd4cdb1529a8416c4ccca_4485599861109762650.png"
    },
    {
     "name": "陽光より輝くもの",
@@ -3641,7 +3697,8 @@
     "verdict": "見送り",
     "level": "far",
     "text": "飲月を無料交換しても、手持ちの「とある星神の殞落を記す」重畳5で代用できる。",
-    "end": "2026-12-22"
+    "end": "2026-12-22",
+    "icon": "https://upload-static.hoyoverse.com/hoyolab-wiki/2023/08/22/59155606/e0aaee96d8273ac82faead308ab5abc8_1426472270354482219.png"
    },
    {
     "name": "流れ逝く岸を歩いて",
@@ -3650,7 +3707,8 @@
     "verdict": "所持済み",
     "level": "ok",
     "text": "重ねる必要はない。",
-    "end": "2026-12-22"
+    "end": "2026-12-22",
+    "icon": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2024/03/21/127094529/8707622cabd577ddf02a0fd00fbd6fd1_4512400129843468543.png"
    },
    {
     "name": "夜明け前",
@@ -3659,7 +3717,8 @@
     "verdict": "見送り",
     "level": "far",
     "text": "景元を取らないので不要。",
-    "end": "2026-12-22"
+    "end": "2026-12-22",
+    "icon": "https://upload-static.hoyoverse.com/hoyowiki/2023/02/21/ac79e739072fa86b2f6d5f851bb2c916_952669953280599733.png"
    }
   ],
   "note": "取得のおすすめは、アサギゲームズの評価をあなたの手持ち（緋英1凸・アッハ・爻光・黄泉2凸・水着ロビン・花火1凸・サンデー、パールと千刃は未所持）に当てはめたものです。飲月と景元の装備はGame8によります。"
