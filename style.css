@@ -1,19 +1,25 @@
-/* 1カラム。上に固定の編成タブ、その下にキャラごとのカード（方針 → 装備 → 目標ゲージ）。 */
+/* 1カラム。上に固定のタブ。全体＝編成ごとの達成度とキャラの一覧、編成＝キャラごとのカード（目標ゲージ → 方針 → 装備）。
+   色は3段階：達成＝緑、あと少し＝黄、未達＝赤。 */
 :root{
   --bg:#eef1f6; --surface:#ffffff; --ink:#18223a; --muted:#5d6a85; --line:#d5dbe8;
   --accent:#b07a12; --accent-soft:#f6ead0;
-  --ok:#1f7a4d; --ok-soft:#dcf1e6; --ng:#b3362c; --ng-soft:#f8e0dd; --track:#e3e7f0;
+  --ok:#1f7a4d; --ok-soft:#dcf1e6; --near:#8f6400; --near-soft:#fbeec4; --ng:#b3362c; --ng-soft:#f8e0dd; --track:#e3e7f0;
+  --ok-fill:#2f9e68; --near-fill:#e0a516; --ng-fill:#d9534a;
+  --wind:#2fa37c; --lightning:#a05ad6; --quantum:#5f5ce0; --physical:#8a90a0; --fire:#e0543c; --ice:#3c9bd6; --imaginary:#c99a1a;
 }
 @media (prefers-color-scheme: dark){ :root{
   --bg:#0f1524; --surface:#182036; --ink:#e8ecf6; --muted:#9aa6c2; --line:#2b3654;
   --accent:#e2b354; --accent-soft:#3a2f14;
-  --ok:#62c796; --ok-soft:#16382a; --ng:#f08a7f; --ng-soft:#45201d; --track:#27314c; } }
+  --ok:#62c796; --ok-soft:#16382a; --near:#f0c75a; --near-soft:#3d3212; --ng:#f08a7f; --ng-soft:#45201d; --track:#27314c;
+  --ok-fill:#3fb67c; --near-fill:#e6b63a; --ng-fill:#e8665c;
+  --wind:#4cc79c; --lightning:#bd84ec; --quantum:#8a88f2; --physical:#a9afc0; --fire:#f07a62; --ice:#63b8ee; --imaginary:#e6bd4a; } }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:120px}
 body{margin:0;background:var(--bg);color:var(--ink);
   font-family:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP","Yu Gothic UI",sans-serif;font-size:15px;line-height:1.6;
   padding:0 max(16px,env(safe-area-inset-right,0px)) calc(40px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));
   -webkit-tap-highlight-color:transparent}
+button{font:inherit;color:inherit}
 .wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
 .top{position:sticky;top:0;z-index:5;background:var(--bg);padding-top:calc(12px + env(safe-area-inset-top,0px));display:flex;flex-direction:column;gap:6px}
 .top-row{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
@@ -21,20 +27,91 @@ h1{font-size:1.25rem;font-weight:800;margin:0;letter-spacing:.02em}
 .updated{color:var(--muted);font-size:.8rem}
 .tabs{display:flex;gap:8px;overflow-x:auto;padding:6px 0 10px;scrollbar-width:none}
 .tabs::-webkit-scrollbar{display:none}
-.tab{flex:none;font:inherit;font-weight:700;border:1px solid var(--line);background:var(--surface);color:var(--ink);
+.tab{flex:none;font-weight:700;border:1px solid var(--line);background:var(--surface);
   border-radius:999px;padding:6px 14px;cursor:pointer;display:flex;align-items:center;gap:6px}
 .tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.count{font-size:.75rem;font-weight:700;background:var(--ng-soft);color:var(--ng);border-radius:999px;padding:0 7px;font-variant-numeric:tabular-nums}
-.count.zero{background:var(--ok-soft);color:var(--ok)}
+.count{font-size:.75rem;font-weight:700;border-radius:999px;padding:0 7px;font-variant-numeric:tabular-nums}
+.count.far{background:var(--ng-soft);color:var(--ng)}
+.count.ok{background:var(--ok-soft);color:var(--ok)}
 .tab[aria-selected="true"] .count{background:var(--bg);color:var(--ink)}
 #view{display:flex;flex-direction:column;gap:14px}
-.teamnote{color:var(--muted);margin:0;font-size:.9rem}
+
+/* ゲージ */
+.bar{height:10px;border-radius:5px;background:var(--track);overflow:hidden}
+.bar.big{height:14px;border-radius:7px}
+.bar i{display:block;height:100%;border-radius:inherit;background:var(--ng-fill)}
+.bar.ok i{background:var(--ok-fill)}
+.bar.near i{background:var(--near-fill)}
+
+/* 丸いアイコン。枠の色は属性 */
+.av{--el:var(--line);flex:none;position:relative;display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;
+  background:var(--track);border:3px solid var(--el);overflow:hidden}
+.av.lg{width:56px;height:56px}
+.av.sm{width:36px;height:36px;border-width:2px}
+.av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.avl{font-weight:800;color:var(--muted)}
+.el-wind{--el:var(--wind)} .el-lightning{--el:var(--lightning)} .el-quantum{--el:var(--quantum)} .el-physical{--el:var(--physical)}
+.el-fire{--el:var(--fire)} .el-ice{--el:var(--ice)} .el-imaginary{--el:var(--imaginary)}
+
+/* 上のまとめ */
+.hero{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.heronum{color:var(--muted);font-weight:600}
+.heronum b{font-size:2rem;line-height:1.1;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
+.keys{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.8rem;color:var(--muted)}
+.key{display:inline-flex;align-items:center;gap:5px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--ng-fill)}
+.dot.ok{background:var(--ok-fill)} .dot.near{background:var(--near-fill)}
+.teamnote{color:var(--muted);margin:0;font-size:.88rem}
+
 .card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0}
 .cardhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px}
 .card h2{font-weight:800;font-size:1.15rem;margin:0}
+
+/* 全体：編成のまとめ */
+.teamhead{all:unset;box-sizing:border-box;display:flex;align-items:baseline;justify-content:space-between;gap:10px;cursor:pointer;width:100%}
+.pct{font-weight:700;font-variant-numeric:tabular-nums;color:var(--ng)}
+.pct b{font-size:1.6rem;line-height:1}
+.pct.ok{color:var(--ok)} .pct.near{color:var(--near)}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.tile .av{width:100%;max-width:56px;height:auto;aspect-ratio:1}
+.tile{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 2px 8px;border-radius:10px;
+  background:var(--ng-soft);min-width:0;text-align:center}
+.tile.ok{background:var(--ok-soft)} .tile.near{background:var(--near-soft)} .tile.none{background:var(--track)}
+.tname{font-size:.74rem;font-weight:700;line-height:1.25;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tstat{font-size:.72rem;font-weight:800;color:var(--ng)}
+.tile.ok .tstat{color:var(--ok)} .tile.near .tstat{color:var(--near)} .tile.none .tstat{color:var(--muted)}
+.nextrow{display:grid;grid-template-columns:auto auto 1fr;gap:10px;align-items:center}
+.rank{display:inline-grid;place-items:center;min-width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:.75rem;font-weight:800;font-variant-numeric:tabular-nums}
+.nextbody .who,.nextbody .what{display:block}
+.nextbody .who{font-weight:800;font-size:.85rem}
+.more{align-self:flex-start;border:1px solid var(--line);background:none;border-radius:999px;padding:5px 14px;font-weight:700;font-size:.85rem;cursor:pointer}
+
+/* 編成：キャラのカード。左の帯の色は達成状況 */
+.card.char{border-left:6px solid var(--ng-fill)}
+.card.char.ok{border-left-color:var(--ok-fill)} .card.char.near{border-left-color:var(--near-fill)} .card.char.none{border-left-color:var(--line)}
+.charhead{display:flex;align-items:center;gap:12px}
+.chartitle{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
 .role{font-size:.78rem;font-weight:700;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:1px 8px}
-.policy{margin:0}
+.elem{font-size:.78rem;font-weight:700;color:var(--el);border:1px solid var(--el);border-radius:4px;padding:0 8px}
+.score{flex:none;font-weight:700;font-variant-numeric:tabular-nums;color:var(--ng);background:var(--ng-soft);border-radius:10px;padding:4px 10px;white-space:nowrap}
+.score b{font-size:1.3rem}
+.score.ok{color:var(--ok);background:var(--ok-soft)} .score.near{color:var(--near);background:var(--near-soft)}
+.targets{display:flex;flex-direction:column;gap:14px}
+.trow{display:flex;flex-direction:column;gap:4px}
+.ttop{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.titem{font-weight:700;font-size:.9rem;color:var(--muted)}
+.tnum{display:flex;align-items:baseline;justify-content:space-between;gap:10px;font-variant-numeric:tabular-nums}
+.tnum .cur{font-weight:800;font-size:1.7rem;line-height:1.15}
+.tnum .goal{color:var(--muted);font-size:.9rem;font-weight:600;white-space:nowrap}
+.trow.far .cur{color:var(--ng)} .trow.near .cur{color:var(--near)} .trow.ok .cur{color:var(--ok)}
+.tmeta{font-size:.78rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:2px 10px}
+.pill{font-size:.8rem;font-weight:800;border-radius:999px;padding:1px 10px;background:var(--ng-soft);color:var(--ng);white-space:nowrap}
+.ok .pill{background:var(--ok-soft);color:var(--ok)}
+.near .pill{background:var(--near-soft);color:var(--near)}
+.policy{margin:0;font-size:.9rem;border-top:1px solid var(--line);padding-top:10px}
+.plabel{display:inline-block;font-size:.72rem;font-weight:800;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:0 6px;margin-right:8px}
 dl.gear{margin:0;display:grid;grid-template-columns:5.2em 1fr;gap:8px 10px;font-size:.88rem;border-top:1px solid var(--line);padding-top:10px}
 dl.gear dt{color:var(--muted);font-weight:600}
 dl.gear dd{margin:0;min-width:0;overflow-wrap:anywhere}
@@ -42,27 +119,19 @@ dl.gear dd{margin:0;min-width:0;overflow-wrap:anywhere}
 .gl + .gl{color:var(--muted)}
 .lbl{display:inline-block;font-size:.68rem;font-weight:700;color:var(--muted);border:1px solid var(--line);border-radius:3px;padding:0 4px;margin-right:6px}
 .lbl.rec{color:var(--accent);border-color:var(--accent)}
-.targets{display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--line);padding-top:10px}
-.trow{display:grid;grid-template-columns:1fr auto;gap:2px 10px;align-items:baseline}
-.titem{font-weight:600}
-.tnum{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
-.tnum .cur{font-weight:800;font-size:1.1rem}
-.tnum .goal{color:var(--muted);font-size:.85rem}
-.bar{grid-column:1/-1;height:6px;border-radius:3px;background:var(--track);overflow:hidden}
-.bar i{display:block;height:100%;background:var(--ng);border-radius:3px}
-.ok .bar i{background:var(--ok)}
-.tmeta{grid-column:1/-1;font-size:.78rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:2px 10px;align-items:center}
-.pill{font-weight:700;border-radius:999px;padding:0 8px;background:var(--ng-soft);color:var(--ng)}
-.ok .pill{background:var(--ok-soft);color:var(--ok)}
 .src{font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;border-top:1px solid var(--line);padding-top:10px}
 .src a{color:var(--ink)}
 .trust{font-weight:700;border-radius:4px;padding:0 6px;border:1px solid var(--line)}
 .trust.hi{color:var(--accent);border-color:var(--accent)}
-.todo{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;align-items:start;cursor:pointer}
-.todo input{width:22px;height:22px;margin:2px 0 0;accent-color:var(--ok)}
-.todo .who{font-weight:800;display:block}
+
+/* やること */
+.todo{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:grid;grid-template-columns:auto auto 1fr;gap:4px 12px;align-items:start;cursor:pointer}
+.todo input{width:22px;height:22px;margin:7px 0 0;accent-color:var(--ok-fill)}
+.todobody{min-width:0}
+.todo .who{font-weight:800;display:flex;align-items:center;gap:6px}
 .todo .what{display:block}
 .todo .why{display:block;color:var(--muted);font-size:.85rem}
+.todo.done{opacity:.6}
 .todo.done .what,.todo.done .who{text-decoration:line-through;color:var(--muted)}
 .state{background:var(--surface);border:1px dashed var(--line);border-radius:12px;padding:20px;color:var(--muted)}
 .legend{font-size:.78rem;color:var(--muted);margin:0}

@@ -114,6 +114,8 @@
  "chars": [
   {
    "name": "セイバー",
+   "element": "wind",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/b5490082dd82024dc2194a8982f5e8e9.png",
    "cone": {
     "now": "報われぬ戴冠",
     "rec": "モチーフが第一候補"
@@ -156,6 +158,8 @@
   },
   {
    "name": "ギルガメッシュ",
+   "element": "lightning",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/478d0c98d516a5351ecd77fe47a4f143.png",
    "cone": {
     "now": "在るがままの我 Lv80 重畳1",
     "note": "推奨のスライドは未取得"
@@ -197,6 +201,8 @@
   },
   {
    "name": "ロビン・夏空の歌",
+   "element": "wind",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/2b8497b39c8e5f0e5a8ee56b30edfd81.png",
    "cone": {
     "now": "空の虹が消えぬように Lv80 重畳1",
     "rec": "モチーフが第一候補",
@@ -247,6 +253,8 @@
   },
   {
    "name": "フォフォ",
+   "element": "wind",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/1c8a30abb7eb57db444267f6ad67f8ae.png",
    "cone": {
     "now": "驚魂の夜 Lv80 重畳1",
     "rec": "フォフォモチーフか羅刹モチーフ。星4は手術後の会話"
@@ -289,6 +297,8 @@
   },
   {
    "name": "黄泉",
+   "element": "lightning",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/c071bbe4c455985e206fa702b6a56723.png",
    "cone": {
     "now": "流れ逝く岸を歩いて Lv80 重畳1",
     "rec": "モチーフが無難（以前より価値は下がった）。代用は風に揺蕩う虚言、終わりなき舞踏"
@@ -343,6 +353,8 @@
   },
   {
    "name": "ペラ",
+   "element": "ice",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/84905d87444d6ff4eb55e03b61817f24.png",
    "cone": {
     "now": "決意は汗のように輝く Lv70 重畳1",
     "note": "使うならLv80に上げる"
@@ -361,6 +373,8 @@
   },
   {
    "name": "椒丘",
+   "element": "fire",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/11e31ad95913f66c799a8dbed6f93c3f.png",
    "cone": {
     "now": "獲物の視線 Lv60 重畳5",
     "note": "使うならLv80に上げる"
@@ -379,6 +393,8 @@
   },
   {
    "name": "アーチャー",
+   "element": "quantum",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/bbccf29264c7f97d1e9af0bc5d92856a.png",
    "cone": {
     "now": "理想を焼く奈落で Lv80 重畳1",
     "rec": "モチーフ"
@@ -425,6 +441,8 @@
   },
   {
    "name": "遠坂凛",
+   "element": "quantum",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/0c3224d494919f77d09f167142eaff49.png",
    "cone": {
     "now": "静かに瞬く小さな火 Lv80 重畳1",
     "rec": "モチーフ"
@@ -477,6 +495,8 @@
   },
   {
    "name": "花火",
+   "element": "quantum",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/2ea8895c72a13a9c9869316f39adb82a.png",
    "cone": {
     "now": "ダンス！ダンス！ダンス！ Lv70 重畳5",
     "rec": "ダンスのままでよい",
@@ -514,6 +534,8 @@
   },
   {
    "name": "丹恒・騰荒",
+   "element": "physical",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/2c9600b365645aa69b58d991fb3e31e4.png",
    "cone": {
     "now": "旅が平穏であるように Lv80 重畳1"
    },
@@ -548,6 +570,8 @@
   },
   {
    "name": "緋英",
+   "element": "physical",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/04a5e21dff722e88e8371150a80a7f79.png",
    "cone": {
     "now": "今日は好運 Lv80 重畳5",
     "rec": "モチーフ、またはタケタケ冒険記",
@@ -588,6 +612,8 @@
   },
   {
    "name": "星神★アッハ",
+   "element": "quantum",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/9992dd2ff280e580fe05729d34279568.png",
    "cone": {
     "now": "はじめの「アッハ」が響く時 Lv80 重畳1",
     "rec": "モチーフ。代用は再び花が咲く季節に、タケタケ冒険記"
@@ -625,6 +651,8 @@
   },
   {
    "name": "爻光",
+   "element": "physical",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ce359035d4cdd393cf993f04b4941a5d.png",
    "cone": {
     "now": "タケタケ冒険記 Lv80 重畳5",
     "rec": "モチーフが第一候補"
@@ -671,6 +699,8 @@
   },
   {
    "name": "ヒアンシー",
+   "element": "wind",
+   "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ca21363b272d3e84f84acfce33f1ec63.png",
    "cone": {
     "now": "物語をめくって Lv80 重畳5",
     "rec": "モチーフが第一候補（超優秀）。他はヘルタ光円錐、物語をめくって"
