@@ -1,5 +1,5 @@
 {
- "updated": "2026/11/15",
+ "updated": "2026/11/17",
  "teams": [
   {
    "name": "セイバー",
@@ -195,7 +195,7 @@
    "element": "wind",
    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/b5490082dd82024dc2194a8982f5e8e9.png",
    "cone": {
-    "now": "報われぬ戴冠",
+    "now": "報われぬ戴冠 Lv80 重畳1",
     "rec": "モチーフが第一候補",
     "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/b18a1bdea9a3f61ca5c7c5939f3cffe5.png"
    },
@@ -527,19 +527,19 @@
     {
      "item": "HP",
      "target": 5981,
-     "now": 6397,
+     "now": 6201,
      "unit": ""
     },
     {
      "item": "効果抵抗",
      "target": 31.8,
-     "now": 43.9,
+     "now": 47.8,
      "unit": "%"
     },
     {
      "item": "速度",
      "target": 151.9,
-     "now": 160,
+     "now": 158,
      "unit": ""
     }
    ],
@@ -1499,9 +1499,9 @@
    "element": "physical",
    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/ce359035d4cdd393cf993f04b4941a5d.png",
    "cone": {
-    "now": "タケタケ冒険記 Lv80 重畳5",
+    "now": "彼女が視ると決めた時 Lv80 重畳1",
     "rec": "モチーフが第一候補",
-    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/4522fdc26c67d73f1a0b689e209c77e2.png"
+    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/d06ca71a67581722526d0218c6305cc3.png"
    },
    "set": {
     "now": "卜者4＋伊須磨州",
@@ -1522,7 +1522,7 @@
     {
      "item": "速度",
      "target": 186.8,
-     "now": 159,
+     "now": 184,
      "unit": "",
      "g8": "160以上",
      "memo": "200で行動回数が増える（努力目標）"
@@ -1530,14 +1530,14 @@
     {
      "item": "会心率",
      "target": 82,
-     "now": 75.5,
+     "now": 70,
      "unit": "%",
      "g8": "82%"
     },
     {
      "item": "会心ダメージ",
      "target": 79,
-     "now": 85.6,
+     "now": 97.9,
      "unit": "%",
      "g8": "140%"
     }
@@ -1547,14 +1547,14 @@
      "slot": "頭",
      "main": "HP",
      "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/1d879fed4e91e27a28516f9455208322.png",
-     "hits": 3,
+     "hits": 5,
      "rolls": 8
     },
     {
      "slot": "手",
      "main": "攻撃",
      "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/a42d973db0e4d973da92249638e08e7b.png",
-     "hits": 3,
+     "hits": 4,
      "rolls": 8
     },
     {
@@ -2051,13 +2051,13 @@
     {
      "item": "速度",
      "target": 160,
-     "now": 165,
+     "now": 159,
      "unit": ""
     },
     {
      "item": "会心ダメージ",
      "target": 239.9,
-     "now": 75.6,
+     "now": 63.3,
      "unit": "%",
      "memo": "「ピンクの明日へ」の行。今は愉悦用の装備の値"
     }
@@ -2067,14 +2067,14 @@
      "slot": "頭",
      "main": "HP",
      "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/1d879fed4e91e27a28516f9455208322.png",
-     "hits": 5,
+     "hits": 1,
      "rolls": 8
     },
     {
      "slot": "手",
      "main": "攻撃",
      "icon": "https://act-webstatic.hoyoverse.com/darkmatter/hkrpg/prod_gf_cn/item_icon_ubd4re/a42d973db0e4d973da92249638e08e7b.png",
-     "hits": 3,
+     "hits": 2,
      "rolls": 8
     },
     {
